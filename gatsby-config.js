@@ -22,7 +22,17 @@ module.exports = {
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: true
+        useACF: true,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/home_section", // <== Custom post slug
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
       }
     },
     `gatsby-transformer-sharp`,

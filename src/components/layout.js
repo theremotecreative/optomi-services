@@ -52,7 +52,7 @@ class Layout extends Component {
                             </MenuRight>
                         </HeaderMain>
 
-                        <main style={{ paddingTop: '500px', backgroundColor: '#333'}}>{children}</main>
+                        <main>{children}</main>
                         <footer>
                           © {new Date().getFullYear()}, Built with
                           {` `}
@@ -92,6 +92,21 @@ const SidebarMenu = styled.div`
     right: -270px;
     background-color: #1b1b1b;
     transition-duration: .3s;
+    button {
+      position: absolute;
+      top: 29px;
+      right: 25px;
+      font-family: sans-serif;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      transition-duration: .5s;
+      &:hover {
+        cursor: pointer;
+        transform: rotate(180deg);
+      }
+    }
 `
 
 const HeaderMain = styled.div`
@@ -103,6 +118,7 @@ const HeaderMain = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 100;
 `
 
 const MainLayout = styled.div`

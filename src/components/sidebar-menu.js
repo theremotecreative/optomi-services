@@ -65,7 +65,7 @@ class SideMainMenu extends Component {
                     Contact
                     </Link>
                 </MenuItem>
-                <SubMenuToggle onClick={() => this.toggleMenu()} />
+                <SubMenuToggle onClick={() => this.toggleMenu()} ><p>Company</p></SubMenuToggle>
                     <SubMenu className={menuName}>
                         <MenuItem>
                             <Link
@@ -117,12 +117,58 @@ class SideMainMenu extends Component {
     }
 }
 
-const MainMenu = styled.ul``
+const MainMenu = styled.ul`
+    list-style: none;
+    padding: 30px;
+    margin: 0;
+`
 
-const MenuItem = styled.li``
+const MenuItem = styled.li`
+    margin: 0 0 10px;
+    a {
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: #61b1e8;
+        text-decoration: none;
+        transition-duration: .3s;
+        &:hover {
+            color: #fff;
+        }
+    }
+`
 
-const SubMenuToggle = styled.div``
+const SubMenuToggle = styled.div`
+    p {
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: #61b1e8;
+        text-decoration: none;
+        transition-duration: .3s;
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+`
 
-const SubMenu = styled.ul``
+const SubMenu = styled.ul`
+    margin: 0;
+    position: relative;
+    top: -15px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition-duration: .5s;
+    &.menuOpen {
+        left: 20px;
+        opacity: 1;
+        visibility: visible;
+        height: 288px;
+    }
+`
 
 export default SideMainMenu
