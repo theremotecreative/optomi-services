@@ -28,6 +28,7 @@ const LogoCol = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 100;
 `
 const Optomi = styled.div`
   border-bottom: 1px solid #fff;

@@ -1,52 +1,172 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { Component } from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import styled from 'styled-components'
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import FixedLogos from "../components/fixed-logos"
+import HeaderLogo from "../components/header-logo"
+import SideMainMenu from "../components/sidebar-menu"
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: '100%',
-          width: '100%',
-          minHeight: '100vh',
-          padding: `0`,
-          paddingTop: '300px',
-          backgroundColor: '#ddd',
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+class Layout extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { isOpen: false };
+    }
+    
+    toggleMenu() {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+    render() {
+        const children = this.props.children
+        let headerName = "mainLayout";
+        if (this.state.isOpen) {
+          headerName += ' mobileOpen';
+        }
+        return (
+            <FullPage>
+                <FixedLogos/>
+                <MainLayout className={headerName}>
+
+                    <MainContent>
+                        <HeaderMain>
+                            <LogoRight>
+                                <Link
+                                to="/"
+                                >
+                                <HeaderLogo/>
+                                </Link>
+                            </LogoRight>
+                            <MenuRight>
+                                <button onClick={() => this.toggleMenu()}>
+                                    <p>menu</p>
+                                    <Hamburger>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </Hamburger>
+                                </button> 
+                            </MenuRight>
+                        </HeaderMain>
+
+                        <main style={{ paddingTop: '500px', backgroundColor: '#333'}}>{children}</main>
+                        <footer>
+                          © {new Date().getFullYear()}, Built with
+                          {` `}
+                          <a href="https://www.gatsbyjs.org">Gatsby</a>
+                        </footer>
+                    </MainContent>
+
+                    <SidebarMenu>
+                        <button onClick={() => this.toggleMenu()}>X</button>
+                        <SideMainMenu/>
+                    </SidebarMenu>
+
+                </MainLayout>
+            </FullPage>
+        );
+    }
 }
+
+const FullPage = styled.div`
+    position: relative;
+    overflow: hidden;
+`
+
+const MainContent = styled.div`
+    width: 100vw;
+    position: relative;
+    top:0;
+    left:0;
+    transition-duration: .3s;
+`
+
+const SidebarMenu = styled.div`
+    position: absolute;
+    width: 270px;
+    height: 100vh;
+    top: 0;
+    right: -270px;
+    background-color: #1b1b1b;
+    transition-duration: .3s;
+`
+
+const HeaderMain = styled.div`
+  position: absolute;
+  margin: 0px auto;
+  max-width: 100%;
+  width: 100%;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`
+
+const MainLayout = styled.div`
+  &.mobileOpen {
+    ${MainContent} {
+      left: -270px;
+    }
+    ${SidebarMenu} {
+      right: 0;
+    }
+  }
+`
+
+const LogoRight = styled.div`
+  padding-right: 15px;
+  .gatsby-image-wrapper {
+    width: 71px;
+    height: 35px;
+    img {
+      margin-bottom: 0;
+    }
+  }
+`
+
+const MenuRight = styled.div`
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  p {
+    font-size: 15px;
+    line-height: 15px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+`
+
+const Hamburger = styled.div`
+  width: 32px;
+  height: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  div {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
