@@ -93,25 +93,51 @@ const ClientsPage = () => {
                         <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                     </ImageBackground>
 
-                    <HeroTitle>
+                    <HeroTitle
+                        data-sal="fade"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <h1>{post.node.title}</h1>
                         <p>Optomi <span>Professional</span> Services</p>
                     </HeroTitle>
 
-                    <HeroContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                    <HeroContent 
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        dangerouslySetInnerHTML={{ __html: post.node.content }}
+                    />
 
-                    <HeroBottom>
+                    <HeroBottom
+                        data-sal="fade"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <a href="#section_one"><FaChevronDown size={32}/></a>
                         <p>{post.node.acf.bottom_subtitle}</p>
                     </HeroBottom>
 
-                    <HeroSocials>
+                    <HeroSocials
+                        data-sal="fade"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
                         <a href="https://www.linkedin.com/company/27003541/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={42}/></a>
                     </HeroSocials>
                 </ClientsBanner>
                 <SectionOne id={"section_one"}>
-                    <SectionOneRow>
+                    <SectionOneRow
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <SectionOneCol>
                             <SectionOneImage sizes={post.node.acf.section_one.column_one_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                             <SectionOneCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_one.column_one_copy }}/>
@@ -127,7 +153,12 @@ const ClientsPage = () => {
                     </SectionOneRow>
                 </SectionOne>
                 <SectionTwo>
-                    <SectionTwoRow>
+                    <SectionTwoRow
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <SectionTwoImage sizes={post.node.acf.section_two.section_two_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                         <SectionTwoCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_two.section_two_copy }}/>
                         <SectionTwoLink to={post.node.acf.section_two.section_two_link}>{post.node.acf.section_two.section_two_link_copy}</SectionTwoLink>

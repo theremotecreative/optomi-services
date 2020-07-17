@@ -90,9 +90,20 @@ const HomeThreeCol = () => {
         data.allWordpressWpHomeSection.edges.map(post => (
             <ThreeColSection>
 
-                <ThreeColContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                <ThreeColContent 
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                />
 
-                <HoverCols>
+                <HoverCols
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                >
                     <HoverCol>
                         <ImageCol>
                             <BackgroundImg sizes={post.node.acf.col_one.col_one_image.localFile.childImageSharp.sizes} alt={post.node.title} />
@@ -146,6 +157,8 @@ const ThreeColSection = styled.div`
     background-color: #000;
     padding-top: 50px;
     padding-bottom: 50px;
+    position: relative;
+    z-index: 1;
 `
 
 const ThreeColContent = styled.div`

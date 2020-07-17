@@ -30,7 +30,13 @@ const HomeBottom = () => {
         
         data.allWordpressWpHomeSection.edges.map(post => (
             <BottomSection>
-                <div class={"bottom-row"}>
+                <div 
+                    class={"bottom-row"}
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                >
                 <HeartImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                 <BottomContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
                 </div>
@@ -42,6 +48,8 @@ const HomeBottom = () => {
 const BottomSection = styled.div`
     background-color: #000;
     padding-bottom: 70px;
+    position: relative;
+    z-index: 1;
     .bottom-row {
         max-width: 1140px;
         width: 100%;

@@ -39,7 +39,13 @@ const HomeParallax = () => {
                 </ImageBackground>
 
                 <div class={"parallax-content"}>
-                    <ParallaxContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                    <ParallaxContent 
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        dangerouslySetInnerHTML={{ __html: post.node.content }}
+                    />
                 </div>
                     
                 <div class={"parallax-bottom"}>
@@ -63,6 +69,7 @@ const ParallaxSection = styled.div`
         width: 100%;
         top: 0;
         left: 0;
+        z-index: 1;
         hr {
             width: 80%;
             margin: 0 auto;
@@ -87,6 +94,7 @@ const ParallaxSection = styled.div`
         width: 100%;
         bottom: 0;
         left: 0;
+        z-index: 1;
         hr {
             width: 80%;
             margin: 0 auto;
@@ -112,7 +120,7 @@ const ImageBackground = styled.div`
     width: 100vw;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
 `
 
 const ParallaxContent = styled.div`

@@ -21,7 +21,13 @@ const HomeSimple = () => {
         data.allWordpressWpHomeSection.edges.map(post => (
             <MiddleSection>
 
-                <MiddleContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                <MiddleContent 
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                />
                     
             </MiddleSection>
         ))
@@ -33,6 +39,8 @@ const MiddleSection = styled.div`
     padding-top: 0px;
     padding-bottom: 0px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 `
 
 const MiddleContent = styled.div`

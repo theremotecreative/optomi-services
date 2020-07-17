@@ -41,7 +41,13 @@ const HomeMiddle = () => {
                     <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                 </ImageBackground>
 
-                <MiddleContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                <MiddleContent 
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                />
 
                 <ArrowIcon>
                     <a href={post.node.acf.banner_arrow_link}><FaChevronDown size={42}/></a>

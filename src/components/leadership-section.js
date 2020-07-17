@@ -22,7 +22,13 @@ class LeadershipSection extends Component {
         return(
             <LeadershipFull>
                 <LeadershipTop>
-                    <div className={"flex-box"}>
+                    <div 
+                        className={"flex-box"}
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                    >
                         <div className={"left-col"}>
                             <h2>Leadership</h2>
                         </div>
@@ -62,7 +68,10 @@ class LeadershipSection extends Component {
     }
 }
 
-const LeadershipFull = styled.div``
+const LeadershipFull = styled.div`
+    position: relative;
+    z-index: 1;
+`
 
 const LeadershipTop = styled.div`
     background-color: #8b8f91;

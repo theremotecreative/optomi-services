@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import "./layout.css"
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import FixedLogos from "../components/fixed-logos"
 import HeaderLogo from "../components/header-logo"
@@ -31,6 +32,7 @@ class Layout extends Component {
                 <FixedLogos/>
                 <MainLayout className={headerName}>
 
+                    <PageTransition>
                     <MainContent>
                         <HeaderMain>
                             <LogoRight>
@@ -56,6 +58,7 @@ class Layout extends Component {
                         <main>{children}</main>
                         <Footer/>
                     </MainContent>
+                    </PageTransition>
 
                     <SidebarMenu>
                         <button onClick={() => this.toggleMenu()}>X</button>
@@ -71,6 +74,7 @@ class Layout extends Component {
 const FullPage = styled.div`
     position: relative;
     overflow: hidden;
+    background-color: #000;
 `
 
 const MainContent = styled.div`
@@ -93,11 +97,13 @@ const SidebarMenu = styled.div`
       position: absolute;
       top: 29px;
       right: 25px;
-      font-family: sans-serif;
+      font-family: "Helvetica Thin";
       background: transparent;
       border: none;
+      outline: 0 !important;
       color: #fff;
       font-size: 14px;
+      font-weight: 700;
       transition-duration: .5s;
       &:hover {
         cursor: pointer;
@@ -161,9 +167,10 @@ const MenuRight = styled.div`
     }
   }
   p {
-    font-family: Raleway;
-    font-size: 12px;
+    font-family: "Helvetica Thin";
+    font-size: 13px;
     line-height: 15px;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 0;
   }

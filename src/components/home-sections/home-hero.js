@@ -45,7 +45,12 @@ const HomeHero = () => {
                     <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                 </ImageBackground>
 
-                <HeroLogo>
+                <HeroLogo
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                >
                     <div className="hero-logo-imgs">
                         <div className="logo-1">
                             <OLogo/>
@@ -61,14 +66,30 @@ const HomeHero = () => {
                     <p>Optomi <span>Professional</span> Services</p>
                 </HeroLogo>
 
-                <HeroContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                <HeroContent 
+                    data-sal="fade"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                />
 
-                <HeroBottom>
+                <HeroBottom
+                    data-sal="fade"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                >
                     <a href={post.node.acf.arrow_link}><FaChevronDown size={32}/></a>
                     <p>{post.node.acf.bottom_subtitle}</p>
                 </HeroBottom>
 
-                <HeroSocials>
+                <HeroSocials
+                    data-sal="fade"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                >
                     <a href={post.node.acf.twitter_link} target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
                     <a href={post.node.acf.linkedin_link} target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={42}/></a>
                 </HeroSocials>
@@ -87,6 +108,7 @@ const HeroBanner = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    z-index: 1;
 `
 const BackgroundImg = styled(Img)`
     height: 100vh;

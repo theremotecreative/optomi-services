@@ -25,7 +25,13 @@ const HomeCanvas = () => {
         data.allWordpressWpHomeSection.edges.map(post => (
             <CanvasSection>
 
-                <CanvasContent dangerouslySetInnerHTML={{ __html: post.node.content }}/>
+                <CanvasContent 
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                />
 
                 <ArrowIcon>
                     <a href={post.node.acf.banner_arrow_link}><FaChevronDown size={42}/></a>
@@ -42,6 +48,7 @@ const CanvasSection = styled.div`
     padding-bottom: 100px;
     text-align: center;
     position: relative;
+    z-index: 1;
 `
 
 const CanvasContent = styled.div`
