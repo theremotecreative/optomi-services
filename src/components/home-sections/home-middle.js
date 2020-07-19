@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FaChevronDown } from 'react-icons/fa'
 
@@ -50,7 +51,7 @@ const HomeMiddle = () => {
                 />
 
                 <ArrowIcon>
-                    <a href={post.node.acf.banner_arrow_link}><FaChevronDown size={42}/></a>
+                    <button onClick={() => scrollTo(post.node.acf.banner_arrow_link)}><FaChevronDown size={42}/></button>
                 </ArrowIcon>
                     
             </MiddleSection>
@@ -105,6 +106,10 @@ const MiddleContent = styled.div`
                     padding-right: 20px;
                     margin: 0 auto;
                     display: flex;
+                    > div {
+                        margin-top: 30vh;
+                        margin-bottom: 30vh;
+                    }
                     .panel-grid-cell {
                         &:first-child {
                             width: 33%;
@@ -181,8 +186,14 @@ const ArrowIcon = styled.div`
     bottom: 0;
     text-align: center;
     z-index: 10;
-    a {
+    button {
         color: #61b1e8;
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

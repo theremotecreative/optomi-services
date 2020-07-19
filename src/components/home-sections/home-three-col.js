@@ -88,7 +88,7 @@ const HomeThreeCol = () => {
     return(
         
         data.allWordpressWpHomeSection.edges.map(post => (
-            <ThreeColSection>
+            <ThreeColSection id={"optomi-provalus-section"}>
 
                 <ThreeColContent 
                     data-sal="slide-up"

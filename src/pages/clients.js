@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -117,7 +118,7 @@ const ClientsPage = () => {
                         data-sal-delay="300"
                         data-sal-easing="ease"
                     >
-                        <a href="#section_one"><FaChevronDown size={32}/></a>
+                        <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
                         <p>{post.node.acf.bottom_subtitle}</p>
                     </HeroBottom>
 
@@ -271,8 +272,14 @@ const HeroBottom = styled.div`
         margin: 0;
         color: rgb(140, 145, 146);
     }
-    a {
+    button {
         color: #5ab3e8;
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

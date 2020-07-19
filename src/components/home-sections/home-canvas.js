@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FaChevronDown } from 'react-icons/fa'
 
@@ -23,7 +24,7 @@ const HomeCanvas = () => {
     return(
         
         data.allWordpressWpHomeSection.edges.map(post => (
-            <CanvasSection>
+            <CanvasSection id={"canvas_section"}>
 
                 <CanvasContent 
                     data-sal="slide-up"
@@ -34,7 +35,7 @@ const HomeCanvas = () => {
                 />
 
                 <ArrowIcon>
-                    <a href={post.node.acf.banner_arrow_link}><FaChevronDown size={42}/></a>
+                    <button onClick={() => scrollTo('#home-identity-row')}><FaChevronDown size={42}/></button>
                 </ArrowIcon>
                     
             </CanvasSection>
@@ -98,8 +99,14 @@ const ArrowIcon = styled.div`
     left: 0;
     bottom: 0;
     text-align: center;
-    a {
+    button {
         color: #000;
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { FaTwitter } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
@@ -80,7 +81,7 @@ const HomeHero = () => {
                     data-sal-delay="300"
                     data-sal-easing="ease"
                 >
-                    <a href={post.node.acf.arrow_link}><FaChevronDown size={32}/></a>
+                    <button onClick={() => scrollTo('#canvas_section')}><FaChevronDown size={32}/></button>
                     <p>{post.node.acf.bottom_subtitle}</p>
                 </HeroBottom>
 
@@ -262,8 +263,14 @@ const HeroBottom = styled.div`
         margin: 0;
         color: rgb(140, 145, 146);
     }
-    a {
+    button {
         color: #5ab3e8;
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

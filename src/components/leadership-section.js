@@ -48,13 +48,20 @@ class LeadershipSection extends Component {
                     {data.allWordpressWpTeamMember.edges.map((post, i) => (
                         <LeadershipSlide id={"slide_" + i} className= {i === this.state.activeSlide ? "active" : "inactive"}>
                             <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
+                            <BackgroundImgBW sizes={post.node.acf.gray_image.localFile.childImageSharp.sizes} alt={post.node.title} />
                             <div class={"slide-overlay"}>
                                 <div class={"slide-row"}>
-                                    <div class={"slide-content"}>
+                                    <div 
+                                        class={"slide-content"}
+                                        data-sal="slide-up"
+                                        data-sal-duration="1000"
+                                        data-sal-delay="300"
+                                        data-sal-easing="ease"
+                                    >
                                         <h3>{post.node.title}</h3>
                                         <p class={"full-title"}>{post.node.acf.full_title}</p>
                                         <hr/>
-                                        <MemberCopy dangerouslySetInnerHTML={{ __html: post.node.content }}></MemberCopy>
+                                        <MemberCopy dangerouslySetInnerHTML={{ __html: post.node.content }}/>
                                         <hr/>
                                         <a href={post.node.acf.linkedin_link} target="_blank" rel="noopener noreferrer"><FaLinkedin/>LinkedIn</a>
                                     </div>
@@ -138,10 +145,22 @@ const LeadershipLink = styled.div`
 const BackgroundImg = styled(Img)`
     height: 100vh;
     width: 100vw;
+    transition-duration: 2s;
     img {
         margin-bottom: 0;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
+    }
+`
+
+const BackgroundImgBW = styled(Img)`
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute !important;
+    opacity: 0;
+    transition-duration: 2s;
+    img {
+        margin-bottom: 0;
     }
 `
 
@@ -162,6 +181,7 @@ const LeadershipSlide = styled.div`
     width: 100%;
     opacity: 0;
     visibility: hidden;
+    background-color: #000;
     .slide-overlay {
         position: absolute;
         top: 0;
@@ -170,7 +190,8 @@ const LeadershipSlide = styled.div`
         width: 100%;
         display: flex;
         align-items: center;
-        background-color: rgba(0,0,0,.6);
+        background-color: rgba(0,0,0,.0);
+        transition-duration: 1s;
         .slide-row {
             max-width: 1140px;
             width: 100%;
@@ -182,9 +203,6 @@ const LeadershipSlide = styled.div`
         .slide-content {
             z-index: 1;
             h3 {
-                font-family: "Helvetica Thin";
-                font-size: 30px;
-                line-height: 38px;
                 color: #fff;
                 font-weight: 100;
                 margin: 0;
@@ -194,7 +212,7 @@ const LeadershipSlide = styled.div`
                 font-family: "Helvetica Thin";
                 color: #fff;
                 font-size: 18px;
-                line-height: 22px;
+                line-height: 22px;/MemberCopy>
                 margin-bottom: 0;
             }
             hr {
@@ -226,10 +244,22 @@ const LeadershipSlide = styled.div`
     &.active {
         opacity: 1;
         visibility: visible;
+        .slide-overlay { 
+            background-color: rgba(0,0,0,.5);
+        }
+        ${BackgroundImgBW} {
+            opacity: 1;
+        }
     }
     &.inactive {
         opacity: 0;
         visibility: hidden;
+        .slide-overlay { 
+            background-color: rgba(0,0,0,.0);
+        }
+        ${BackgroundImgBW} {
+            opacity: 0;
+        }
     }
     &:first-child {
         .slide-row {
@@ -260,6 +290,15 @@ export default props => (
                             full_title
                             menu_title
                             linkedin_link
+                            gray_image {
+                                localFile {
+                                    childImageSharp {
+                                        sizes(maxWidth: 2000) {
+                                          ...GatsbyImageSharpSizes
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
