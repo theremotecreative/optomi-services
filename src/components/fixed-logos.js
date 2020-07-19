@@ -29,6 +29,9 @@ const LogoCol = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   z-index: 101;
+  @media(max-width:700px) {
+    display: none;
+  }
 `
 const Optomi = styled.div`
   border-bottom: 1px solid #fff;

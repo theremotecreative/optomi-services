@@ -122,6 +122,10 @@ const HeaderMain = styled.div`
   justify-content: flex-end;
   align-items: center;
   z-index: 100;
+  @media(max-width:600px) {
+    background-color: #000;
+    justify-content: space-between;
+  }
 `
 
 const MainLayout = styled.div`

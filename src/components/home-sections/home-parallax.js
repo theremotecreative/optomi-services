@@ -151,6 +151,12 @@ const ParallaxContent = styled.div`
         color: #8c9091;
         line-height: 35px;
     }
+    @media(max-width:800px) {
+        margin: 0 auto;
+        p {
+            text-align: center;
+        }
+    }
 `
 
 export default HomeParallax

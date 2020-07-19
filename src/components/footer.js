@@ -67,6 +67,9 @@ const FooterRow = styled.div`
     padding-bottom: 50px;
     margin: 0 auto;
     display: flex;
+    @media(max-width:700px) {
+        flex-wrap: wrap;
+    }
 `
 
 const FooterCol = styled.div`
@@ -75,6 +78,10 @@ const FooterCol = styled.div`
         width: 150px;
         height: 74px;
         margin-bottom: 15px;
+        @media(max-width:700px) {
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
     }
     h4 {
         font-family: "Helvetica Thin";
@@ -113,6 +120,11 @@ const FooterCol = styled.div`
     svg {
         color: #818181;
         margin-right: 15px;
+    }
+    @media(max-width:700px) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
 `
 

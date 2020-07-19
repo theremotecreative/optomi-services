@@ -111,6 +111,12 @@ const LeadershipTop = styled.div`
                 margin-bottom: 0;
             }
         }
+        @media(max-width:950px) {
+            display: block;
+            .left-col {
+                margin-right: 0;
+            }
+        }
     }
 `
 
@@ -118,6 +124,9 @@ const LeadershipMenu = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media(max-width:700px) {
+        display: none;
+    }
 `
 
 const LeadershipLink = styled.div`
@@ -137,6 +146,11 @@ const LeadershipLink = styled.div`
         &:hover {
             cursor: pointer;
         }
+        @media(max-width:950px) {
+            font-size: 14px;
+            line-height: 1.1;
+            padding: 15px 10px;
+        }
     }
     &:hover {
         background-color: #63666b;
@@ -148,6 +162,14 @@ const BackgroundImg = styled(Img)`
     transition-duration: 2s;
     img {
         margin-bottom: 0;
+    }
+    @media(max-width:700px) {
+        height: 50vh;
+        width: 50vw;
+    }
+    @media(max-width:550px) {
+        height: 70vh;
+        width: 100%;
     }
 `
 
@@ -162,6 +184,9 @@ const BackgroundImgBW = styled(Img)`
     img {
         margin-bottom: 0;
     }
+    @media(max-width:700px) {
+        display: none !important;
+    }
 `
 
 const LeadershipSlider = styled.div`
@@ -169,9 +194,21 @@ const LeadershipSlider = styled.div`
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    @media(max-width:700px) {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
 `
 
-const MemberCopy = styled.div``
+const MemberCopy = styled.div`
+    @media(max-width:700px) {
+        p {
+            font-size: 14px;
+            line-height: 1.1;
+        }
+    }
+`
 
 const LeadershipSlide = styled.div`
     position: absolute;
@@ -179,8 +216,6 @@ const LeadershipSlide = styled.div`
     left: 0;
     height: 100vh;
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
     background-color: #000;
     .slide-overlay {
         position: absolute;
@@ -264,6 +299,55 @@ const LeadershipSlide = styled.div`
     &:first-child {
         .slide-row {
             justify-content: flex-end;
+        }
+    }
+    @media(max-width:700px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: 50vh;
+        width: 50%;
+        overflow: hidden;
+        &.inactive {
+            opacity: 1;
+            visibility: visible;
+        }
+        .slide-overlay {
+            height: 50vh;
+            width: 50vw;
+            top: 50vh;
+            background-color: rgba(0,0,0,.5) !important;
+            text-align: center;
+            .slide-content {
+                hr,
+                a {
+                    display: none;
+                }
+            }
+        }
+        &:hover {
+            .slide-overlay {
+                top: 0;
+            }
+        }
+    }
+    @media(max-width:550px) {
+        height: 70vh;
+        width: 100%;
+        .slide-overlay {
+            height: 70vh;
+            width: 100vw;
+            top: 70vh;
+            .slide-row {
+                justify-content: center !important;
+            }
+        }
+        &:nth-child(8) {
+            ${BackgroundImg} {
+                img {
+                    object-position: right center !important;
+                }
+            }
         }
     }
 `

@@ -61,7 +61,7 @@ const HomeMiddle = () => {
 
 const MiddleSection = styled.div`
     position: relative;
-    min-height: 140vh;
+    min-height: 120vh;
     min-width: 100vw;
     height: 100%;
     width: 100%;
@@ -69,7 +69,7 @@ const MiddleSection = styled.div`
 `
 
 const BackgroundImg = styled(Img)`
-    height: 140vh;
+    height: 120vh;
     width: 100vw;
     img {
         margin-bottom: 0;
@@ -78,7 +78,7 @@ const BackgroundImg = styled(Img)`
 
 const ImageBackground = styled.div`
     position: absolute;
-    height: 140vh;
+    height: 120vh;
     width: 100vw;
     top: 0;
     left: 0;
@@ -87,12 +87,12 @@ const ImageBackground = styled.div`
 
 const MiddleContent = styled.div`
     position: absolute;
-    height: 140vh;
+    height: 120vh;
     width: 100%;
     margin: 0 auto;
     z-index: 2;
     > .panel-layout {
-        height: 140vh;
+        height: 120vh;
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -170,6 +170,22 @@ const MiddleContent = styled.div`
                                     color: #fff;
                                     border-color: #fff;
                                 }
+                            }
+                        }
+                    }
+                    @media(max-width:1050px) {
+                        max-width: 800px;
+                        display: block;
+                        .panel-grid-cell {
+                            &:first-child {
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                width: 100%;
+                            }
+                            &:last-child {
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                width: 100%;
                             }
                         }
                     }

@@ -173,7 +173,7 @@ const ThreeColContent = styled.div`
         text-align: center;
         font-size: 52px;
         font-weight: 300;
-        line-height: 40px;
+        line-height: 1;
         span {
             font-size: 25px;
         }
@@ -197,6 +197,12 @@ const HoverCols = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media(max-width:1000px) {
+        justify-content: center;
+    }
+    @media(max-width:700px) {
+        display: block;
+    }
 `
 
 const ImageCol = styled.div``
@@ -206,6 +212,14 @@ const BackgroundImg = styled(Img)`
     width: 312px;
     img {
         margin-bottom: 0;
+    }
+    @media(max-width:1000px) {
+        height: 268px;
+        width: 200px;
+    }
+    @media(max-width:700px) {
+        height: 416px;
+        width: 312px;
     }
 `
 
@@ -239,6 +253,14 @@ const ImageHover = styled.div`
     ${BackgroundImg} {
         position: absolute !important;
     }
+    @media(max-width:1000px) {
+        height: 268px;
+        width: 200px;
+    }
+    @media(max-width:700px) {
+        height: 416px;
+        width: 312px;
+    }
 `
 
 const HoverCol = styled.div`
@@ -249,6 +271,14 @@ const HoverCol = styled.div`
         ${ImageHover} {
             top: 0;
         }
+    }
+    @media(max-width:1000px) {
+        width: 200px;
+        margin: 20px;
+    }
+    @media(max-width:700px) {
+        width: 312px;
+        margin: 20px auto;
     }
 `
 

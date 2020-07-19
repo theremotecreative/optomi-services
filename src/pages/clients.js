@@ -133,21 +133,31 @@ const ClientsPage = () => {
                     </HeroSocials>
                 </ClientsBanner>
                 <SectionOne id={"section_one"}>
-                    <SectionOneRow
+                    <SectionOneRow>
+                        <SectionOneCol
                         data-sal="slide-up"
                         data-sal-duration="1000"
                         data-sal-delay="300"
                         data-sal-easing="ease"
-                    >
-                        <SectionOneCol>
+                        >
                             <SectionOneImage sizes={post.node.acf.section_one.column_one_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                             <SectionOneCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_one.column_one_copy }}/>
                         </SectionOneCol>
-                        <SectionOneCol>
+                        <SectionOneCol
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        >
                             <SectionOneImage sizes={post.node.acf.section_one.column_two_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                             <SectionOneCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_one.column_two_copy }}/>
                         </SectionOneCol>
-                        <SectionOneCol>
+                        <SectionOneCol
+                        data-sal="slide-up"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        >
                             <SectionOneImage sizes={post.node.acf.section_one.column_three_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                             <SectionOneCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_one.column_three_copy }}/>
                         </SectionOneCol>
@@ -180,6 +190,9 @@ const ClientsBanner = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @media (max-width:600px) {
+        display: block;
+    }
 `
 const BackgroundImg = styled(Img)`
     height: 100vh;
@@ -222,6 +235,14 @@ const HeroTitle = styled.div`
             color: #5ab3e8;
         }
     }
+    @media(max-width: 600px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 20px;
+        padding-top: 100px;
+        text-align: center;
+    }
 `
 
 const HeroContent = styled.div`
@@ -248,6 +269,9 @@ const HeroContent = styled.div`
             font-family: 'Freeland';
             font-style: italic;
         }
+        @media(max-width:600px) {
+            font-size: 42px;
+        }
     }
     p {
         font-family: "Helvetica Thin";
@@ -257,6 +281,12 @@ const HeroContent = styled.div`
         color: #5ab3e8;
         text-transform: uppercase;
         line-height: 1.2;
+        @media(max-width:600px) {
+            font-size: 24px;
+        }
+    }
+    @media(max-width:600px) {
+        margin-top: 30px;
     }
 `
 
@@ -317,11 +347,21 @@ const SectionOneRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media(max-width:1000px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `
 
 const SectionOneCol = styled.div`
     width: 30%;
     text-align: center;
+    @media(max-width:1000px) {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
 `
 
 const SectionOneImage = styled(Img)`

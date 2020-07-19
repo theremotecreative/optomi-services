@@ -199,6 +199,9 @@ const HeroContent = styled.div`
                     max-width: 1100px;
                     margin: 0 auto;
                     margin-bottom: 20px;
+                    @media(max-width:600px) {
+                        font-size: 32px;
+                    }
                 }
                 p {
                     font-family: "Helvetica Thin";
