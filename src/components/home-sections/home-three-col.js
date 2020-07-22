@@ -98,13 +98,13 @@ const HomeThreeCol = () => {
                     dangerouslySetInnerHTML={{ __html: post.node.content }}
                 />
 
-                <HoverCols
+                <HoverCols>
+                    <HoverCol
                     data-sal="slide-up"
                     data-sal-duration="1000"
                     data-sal-delay="300"
                     data-sal-easing="ease"
-                >
-                    <HoverCol>
+                    >
                         <ImageCol>
                             <BackgroundImg sizes={post.node.acf.col_one.col_one_image.localFile.childImageSharp.sizes} alt={post.node.title} />
                         </ImageCol>
@@ -118,7 +118,12 @@ const HomeThreeCol = () => {
                             </div>
                         </ImageHover>
                     </HoverCol>
-                    <HoverCol>
+                    <HoverCol
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    >
                         <ImageCol>
                             <BackgroundImg sizes={post.node.acf.col_two.col_two_image.localFile.childImageSharp.sizes} alt={post.node.title} />
                         </ImageCol>
@@ -132,7 +137,12 @@ const HomeThreeCol = () => {
                             </div>
                         </ImageHover>
                     </HoverCol>
-                    <HoverCol>
+                    <HoverCol
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    >
                         <ImageCol>
                             <BackgroundImg sizes={post.node.acf.col_three.col_three_image.localFile.childImageSharp.sizes} alt={post.node.title} />
                         </ImageCol>
@@ -177,6 +187,10 @@ const ThreeColContent = styled.div`
         span {
             font-size: 25px;
         }
+        @media(max-width:500px) {
+            font-size: 32px;
+            line-height: 1.1;
+        }
     }
     p {
         font-family: "Helvetica Thin";
@@ -185,6 +199,10 @@ const ThreeColContent = styled.div`
         font-weight: normal;
         line-height: 40px;
         text-align: center;
+        @media(max-width:500px) {
+            font-size: 28px;
+            line-height: 1.1;
+        }
     }
 `
 
@@ -220,6 +238,10 @@ const BackgroundImg = styled(Img)`
     @media(max-width:700px) {
         height: 416px;
         width: 312px;
+    }
+    @media(max-width:500px) {
+        height: 268px;
+        width: 200px;
     }
 `
 
@@ -261,6 +283,10 @@ const ImageHover = styled.div`
         height: 416px;
         width: 312px;
     }
+    @media(max-width:500px) {
+        height: 268px;
+        width: 200px;
+    }
 `
 
 const HoverCol = styled.div`
@@ -279,6 +305,9 @@ const HoverCol = styled.div`
     @media(max-width:700px) {
         width: 312px;
         margin: 20px auto;
+    }
+    @media(max-width:500px) {
+        width: 200px;
     }
 `
 

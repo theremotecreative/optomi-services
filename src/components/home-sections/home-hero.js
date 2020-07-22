@@ -143,18 +143,30 @@ const HeroLogo = styled.div`
             .gatsby-image-wrapper {
                 width: 120px;
                 height: 132px;
+                @media(max-width:500px) {
+                    width: 102px;
+                    height: 113px;
+                }
             }
         }
         .logo-2 {
             .gatsby-image-wrapper {
                 width: 92px;
                 height: 110px;
+                @media(max-width:500px) {
+                    width: 78px;
+                    height: 93px;
+                }
             }
         }
         .logo-3 {
             .gatsby-image-wrapper {
                 width: 77px;
                 height: 110px;
+                @media(max-width:500px) {
+                    width: 65px;
+                    height: 93px;
+                }
             }
         }
     }
@@ -175,6 +187,12 @@ const HeroLogo = styled.div`
         span {
             color: #5ab3e8;
         }
+        @media(max-width:420px) {
+            font-size: 18px;
+        }
+    }
+    @media(max-width:500px) {
+        padding: 20px;
     }
 `
 
@@ -202,11 +220,18 @@ const HeroContent = styled.div`
                     @media(max-width:600px) {
                         font-size: 32px;
                     }
+                    @media(max-width:420px) {
+                        font-size: 20px;
+                    }
                 }
                 p {
                     font-family: "Helvetica Thin";
                     font-size: 17px;
                     color: #8c9192;
+                    @media(max-width:420px) {
+                        font-size: 14px;
+                        line-height: 1.2;
+                    }
                 }
             }
             .panel-last-child {
@@ -231,6 +256,9 @@ const HeroContent = styled.div`
                         text-align: center;
                         margin: 0;
                         color: rgb(140, 145, 146);
+                        @media(max-width:500px) {
+                            display: none;
+                        }
                     }
                 }
                 .hero-socials {
@@ -265,6 +293,9 @@ const HeroBottom = styled.div`
         text-align: center;
         margin: 0;
         color: rgb(140, 145, 146);
+        @media(max-width:500px) {
+            display: none;
+        }
     }
     button {
         color: #5ab3e8;

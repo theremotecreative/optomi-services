@@ -94,6 +94,9 @@ const BottomContent = styled.div`
             color: #5ab3e8;
             text-decoration: none !important;
         }
+        @media(max-width:420px) {
+            font-size: 28px;
+        }
     }
 `
 

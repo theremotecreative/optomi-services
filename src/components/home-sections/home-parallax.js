@@ -143,6 +143,9 @@ const ParallaxContent = styled.div`
             color: #8c9192;
             text-transform: uppercase;
         }
+        @media(max-width:420px) {
+            font-size: 54px;
+        }
     }
     p {
         font-family: "Helvetica Thin";

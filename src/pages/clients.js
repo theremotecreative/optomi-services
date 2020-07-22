@@ -222,6 +222,9 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        @media(max-width:500px) {
+            font-size: 52px;
+        }
     }
     p {
         font-family: "Helvetica Thin";
@@ -233,6 +236,9 @@ const HeroTitle = styled.div`
         color: rgb(140,145,146);
         span {
             color: #5ab3e8;
+        }
+        @media(max-width:500px) {
+            font-size: 18px;
         }
     }
     @media(max-width: 600px) {
@@ -272,6 +278,9 @@ const HeroContent = styled.div`
         @media(max-width:600px) {
             font-size: 42px;
         }
+        @media(max-width:500px) {
+            font-size: 28px;
+        }
     }
     p {
         font-family: "Helvetica Thin";
@@ -283,6 +292,10 @@ const HeroContent = styled.div`
         line-height: 1.2;
         @media(max-width:600px) {
             font-size: 24px;
+        }
+        @media(max-width:500px) {
+            font-size: 18px;
+            color: #fff;
         }
     }
     @media(max-width:600px) {
@@ -389,6 +402,10 @@ const SectionOneCopy = styled.div`
         color: #000;
         font-family: "Helvetica Thin";
         letter-spacing: 1px;
+        @media(max-width:500px) {
+            font-size: 18px;
+            line-height: 1.2;
+        }
     }
 `
 
@@ -428,6 +445,10 @@ const SectionTwoCopy = styled.div`
         font-size: 28px;
         line-height: 35px;
         color: #fff;
+        @media(max-width:500px) {
+            font-size: 18px;
+            line-height: 1.2;
+        }
     }
 `
 

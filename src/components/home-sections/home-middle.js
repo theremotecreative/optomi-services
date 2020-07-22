@@ -121,6 +121,9 @@ const MiddleContent = styled.div`
                                 line-height: 80px;
                                 font-weight: 400;
                                 letter-spacing: 0px;
+                                @media(max-width:500px) {
+                                    font-size: 52px;
+                                }
                             }
                         }
                         &:last-child {
@@ -135,6 +138,10 @@ const MiddleContent = styled.div`
                                 span.blue {
                                     color: #61b1e8;
                                 }
+                                @media(max-width:500px) {
+                                    font-size: 22px;
+                                    line-height: 1.1;
+                                }
                             }
                             .p2 {
                                 font-family: "Helvetica Thin";
@@ -145,6 +152,10 @@ const MiddleContent = styled.div`
                                 margin-bottom: 0;
                                 span.blue {
                                     color: #61b1e8;
+                                }
+                                @media(max-width:500px) {
+                                    font-size: 18px;
+                                    line-height: 1.1;
                                 }
                             }
                             a {
@@ -169,6 +180,9 @@ const MiddleContent = styled.div`
                                 &:hover {
                                     color: #fff;
                                     border-color: #fff;
+                                }
+                                @media(max-width:500px) {
+                                    font-size: 20px;
                                 }
                             }
                         }

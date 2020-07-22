@@ -30,6 +30,11 @@
   src: url("../static/fonts/antonio/Antonio-Bold.ttf");
 } 
 
+@font-face {
+  font-family: "Freeland";
+  src: url("../static/fonts/freeland/freeland.woff");
+} 
+
 
 
 /* Layout */
