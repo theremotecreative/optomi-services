@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
+import { FaCaretDown } from 'react-icons/fa'
+
 class SideMainMenu extends Component {
 
     constructor(props) {
@@ -65,7 +67,7 @@ class SideMainMenu extends Component {
                     Contact
                     </Link>
                 </MenuItem>
-                <SubMenuToggle onClick={() => this.toggleMenu()} ><p>Company</p></SubMenuToggle>
+                <SubMenuToggle onClick={() => this.toggleMenu()} ><p>Company <FaCaretDown size={12}/></p></SubMenuToggle>
                     <SubMenu className={menuName}>
                         <MenuItem>
                             <Link
@@ -148,9 +150,14 @@ const SubMenuToggle = styled.div`
         color: #61b1e8;
         text-decoration: none;
         transition-duration: .3s;
+        display: flex;
+        align-items: center;
         &:hover {
             cursor: pointer;
             color: #fff;
+        }
+        svg {
+            margin-left: 3px;
         }
     }
 `
