@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import Layout from "../components/layout"
@@ -75,7 +74,6 @@ const AboutPage = () => {
                         data-sal-easing="ease"
                     >
                         <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
-                        <p>{post.node.acf.bottom_subtitle}</p>
                     </HeroBottom>
 
                     <HeroSocials
