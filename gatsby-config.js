@@ -39,6 +39,7 @@ module.exports = {
           "**/team_member", // <== Custom post slug
           "**/custom_page", // <== Custom post slug
           "**/news", // <== Custom post slug
+          "**/location", // <== Custom post slug
           "**/media",
           "**/tags",
           "**/taxonomies",
