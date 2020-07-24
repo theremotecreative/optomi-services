@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import HomeLayout from "../components/home-layout"
 import SEO from "../components/seo"
 
 import HomeHero from "../components/home-sections/home-hero"
@@ -13,7 +13,7 @@ import HomeParallax from "../components/home-sections/home-parallax"
 import HomeBottom from "../components/home-sections/home-bottom"
 
 const IndexPage = () => (
-  <Layout>
+  <HomeLayout>
     <SEO title="Home" />
     <HomeHero/>
     <HomeCanvas/>
@@ -23,7 +23,7 @@ const IndexPage = () => (
     <LeadershipSection/>
     <HomeParallax/>
     <HomeBottom/>
-  </Layout>
+  </HomeLayout>
 )
 
 export default IndexPage

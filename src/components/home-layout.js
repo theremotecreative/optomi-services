@@ -10,7 +10,7 @@ import HeaderLogo from "../components/header-logo"
 import SideMainMenu from "../components/sidebar-menu"
 import Footer from "../components/footer"
 
-class Layout extends Component {
+class HomeLayout extends Component {
 
     constructor(props) {
         super(props);
@@ -140,6 +140,8 @@ const MainLayout = styled.div`
 `
 
 const LogoRight = styled.div`
+  opacity: 0;
+  visibility: hidden;
   padding-right: 15px;
   .gatsby-image-wrapper {
     width: 71px;
@@ -147,6 +149,10 @@ const LogoRight = styled.div`
     img {
       margin-bottom: 0;
     }
+  }
+  @media(max-width:600px) {
+    opacity: 1;
+    visibility: visible;
   }
 `
 
@@ -194,8 +200,8 @@ const Hamburger = styled.div`
   }
 `
 
-Layout.propTypes = {
+HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default HomeLayout

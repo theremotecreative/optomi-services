@@ -10,12 +10,15 @@ const FixedLogos = () => (
     <Optomi>
       <a href="http://optomi.com/" target="_blank" rel="noopener noreferrer"><OptomiLogo/></a>
     </Optomi>
+    <Divider style={{ marginTop: '10px', marginBottom: '10px' }}/>
     <Pro>
       <a href="https://provalus.com/" target="_blank" rel="noopener noreferrer"><ProLogo/></a>
     </Pro>
+    <Divider style={{ marginTop: '8px', marginBottom: '0px' }}/>
     <San>
       <a href="http://www.santeka.com/" target="_blank" rel="noopener noreferrer"><SanLogo/></a>
     </San>
+    <Divider/>
   </LogoCol>
 )
 
@@ -34,9 +37,9 @@ const LogoCol = styled.div`
   }
 `
 const Optomi = styled.div`
-  border-bottom: 1px solid #fff;
-  padding: 10px 0;
+  padding: 0;
   width: 90px;
+  margin-left: 10px;
   .gatsby-image-wrapper {
     width: 62px;
     height: 40px;
@@ -47,8 +50,7 @@ const Optomi = styled.div`
   }
 `
 const Pro = styled.div`
-  border-bottom: 1px solid #fff;
-  padding: 10px 0;
+  padding: 0;
   width: 90px;
   .gatsby-image-wrapper {
     width: 50px;
@@ -60,9 +62,9 @@ const Pro = styled.div`
   }
 `
 const San = styled.div`
-  border-bottom: 1px solid #fff;
-  padding: 10px 0;
+  padding: 0;
   width: 90px;
+  margin-left: 5px;
   .gatsby-image-wrapper {
     width: 70px;
     height: 63px;
@@ -71,6 +73,11 @@ const San = styled.div`
       margin-bottom: 0;
     }
   }
+`
+
+const Divider = styled.hr`
+  background-color: #aaa;
+  width: 50px;
 `
 
 export default FixedLogos

@@ -46,49 +46,69 @@ const HomeHero = () => {
                     <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                 </ImageBackground>
 
-                <HeroLogo
-                    data-sal="slide-up"
-                    data-sal-duration="1000"
-                    data-sal-delay="300"
-                    data-sal-easing="ease"
-                >
+                <div>
+                <HeroLogo>
                     <div className="hero-logo-imgs">
-                        <div className="logo-1">
+                        <div 
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-delay="300"
+                        data-sal-easing="ease"
+                        className="logo-1"
+                        >
                             <OLogo/>
                         </div>
-                        <div className="logo-2">
+                        <div 
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-delay="600"
+                        data-sal-easing="ease"
+                        className="logo-2"
+                        >
                             <PLogo/>
                         </div>
-                        <div className="logo-3">
+                        <div 
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-delay="900"
+                        data-sal-easing="ease"
+                        className="logo-3"
+                        >
                             <SLogo/>
                         </div>
                     </div>
-                    <hr/>
-                    <p>Optomi <span>Professional</span> Services</p>
+                    <hr
+                    data-sal="fade"
+                    data-sal-duration="1000"
+                    data-sal-easing="ease"
+                    />
+                    <p
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-easing="ease"
+                    >Optomi <span>Professional</span> Services</p>
                 </HeroLogo>
 
                 <HeroContent 
                     data-sal="fade"
                     data-sal-duration="1000"
-                    data-sal-delay="300"
                     data-sal-easing="ease"
                     dangerouslySetInnerHTML={{ __html: post.node.content }}
                 />
+                </div>
 
                 <HeroBottom
                     data-sal="fade"
                     data-sal-duration="1000"
-                    data-sal-delay="300"
                     data-sal-easing="ease"
                 >
-                    <button onClick={() => scrollTo('#canvas_section')}><FaChevronDown size={32}/></button>
+                    <button onClick={() => scrollTo('#canvas_section')}><FaChevronDown size={42}/></button>
                     <p>{post.node.acf.bottom_subtitle}</p>
                 </HeroBottom>
 
                 <HeroSocials
                     data-sal="fade"
                     data-sal-duration="1000"
-                    data-sal-delay="300"
                     data-sal-easing="ease"
                 >
                     <a href={post.node.acf.twitter_link} target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -132,6 +152,7 @@ const HeroLogo = styled.div`
     flex-wrap: wrap;
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 50px;
     justify-content: center;
     .hero-logo-imgs {
         display: flex;
@@ -150,6 +171,9 @@ const HeroLogo = styled.div`
             }
         }
         .logo-2 {
+            margin-left: -10px;
+            margin-right: -7px;
+            margin-top: 2px;
             .gatsby-image-wrapper {
                 width: 92px;
                 height: 110px;
@@ -160,6 +184,7 @@ const HeroLogo = styled.div`
             }
         }
         .logo-3 {
+            margin-top: 5px;
             .gatsby-image-wrapper {
                 width: 77px;
                 height: 110px;
@@ -172,9 +197,11 @@ const HeroLogo = styled.div`
     }
     hr {
         width: 100%;
+        max-width: 400px;
         background-color: rgba(255, 255, 255, 0.5);
         margin-bottom: 5px;
         z-index: 1;
+        transition-delay: 1.2s;
     }
     p {
         font-family: "Helvetica Thin";
@@ -184,6 +211,7 @@ const HeroLogo = styled.div`
         z-index: 1;
         font-size: 25px;
         color: rgb(140, 145, 146);
+        transition-delay: 1.5s;
         span {
             color: #5ab3e8;
         }
@@ -201,6 +229,7 @@ const HeroContent = styled.div`
     z-index: 10;
     min-width: 100vw;
     width: 100%;
+    transition-delay: 1.8s;
     .home-hero {
         > .panel-grid-cell {
             display: flex;
@@ -214,7 +243,7 @@ const HeroContent = styled.div`
                     font-size: 48px;
                     font-weight: 300;
                     color: #5ab3e8;
-                    max-width: 1100px;
+                    max-width: 1000px;
                     margin: 0 auto;
                     margin-bottom: 20px;
                     @media(max-width:600px) {
@@ -226,55 +255,12 @@ const HeroContent = styled.div`
                 }
                 p {
                     font-family: "Helvetica Thin";
-                    font-size: 17px;
+                    font-size: 24px;
+                    line-height: 1.2;
                     color: #8c9192;
                     @media(max-width:420px) {
                         font-size: 14px;
                         line-height: 1.2;
-                    }
-                }
-            }
-            .panel-last-child {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                .hero-bottom-copy {
-                    text-align: center;
-                    margin-bottom: 20px;
-                    a {
-                        display: inline-block;
-                        padding: 20px;
-                        padding-bottom: 5px;
-                        img {
-                            width: 30px;
-                            height: auto;
-                            margin-bottom: 0;
-                        }
-                    }
-                    p {
-                        font-family: "Helvetica Thin";
-                        text-align: center;
-                        margin: 0;
-                        color: rgb(140, 145, 146);
-                        @media(max-width:500px) {
-                            display: none;
-                        }
-                    }
-                }
-                .hero-socials {
-                    position: absolute;
-                    right: 20px;
-                    bottom: 40px;
-                    width: 60px;
-                    border-left: 1px solid rgba(255, 255, 255, 0.5);
-                    padding: 0 10px;
-                    a {
-                        display: inline-block;
-                        img {
-                            width: 45px;
-                            height: auto;
-                            margin-bottom: 0;
-                        }
                     }
                 }
             }
@@ -284,10 +270,11 @@ const HeroContent = styled.div`
 
 const HeroBottom = styled.div`
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     width: 100%;
     text-align: center;
     z-index: 1;
+    transition-delay: 2.1s;
     p {
         font-family: "Helvetica Thin";
         text-align: center;
@@ -318,6 +305,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 2.4s;
     a {
         display: inline-block;
         &:first-child {
