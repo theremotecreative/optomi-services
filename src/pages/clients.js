@@ -95,9 +95,9 @@ const ClientsPage = () => {
                     </ImageBackground>
 
                     <HeroTitle
-                        data-sal="fade"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="600"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
@@ -105,7 +105,7 @@ const ClientsPage = () => {
                     </HeroTitle>
 
                     <HeroContent 
-                        data-sal="slide-up"
+                        data-sal="zoom-in"
                         data-sal-duration="1000"
                         data-sal-delay="300"
                         data-sal-easing="ease"
@@ -115,7 +115,7 @@ const ClientsPage = () => {
                     <HeroBottom
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
@@ -125,7 +125,7 @@ const ClientsPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -262,7 +262,7 @@ const HeroContent = styled.div`
     margin-top: 100px;
     h2 {
         font-family: "Helvetica Thin";
-        max-width: 800px;
+        max-width: 850px;
         width: 100%;
         color: #fff;
         margin: 0 auto;
@@ -273,7 +273,7 @@ const HeroContent = styled.div`
         span {
             color: #5ab3e8;
             font-family: 'Freeland';
-            font-style: italic;
+            font-size: 91px;
         }
         @media(max-width:600px) {
             font-size: 42px;
@@ -434,11 +434,13 @@ const SectionTwoImage = styled(Img)`
 `
 
 const SectionTwoCopy = styled.div`
+    margin-top: -70px;
     h2 {
         font-family: "Helvetica Thin";
         color: #fff;
         font-size: 50px;
         line-height: 50px;
+        font-weight: 100;
     }
     p {
         font-family: "Helvetica Thin";
@@ -455,7 +457,6 @@ const SectionTwoCopy = styled.div`
 const SectionTwoLink = styled(Link)`
     color: #5ab3e8;
     font-family: 'Freeland';
-    font-style: italic;
     font-size: 52px;
     line-height: 52px;
     padding-top: 15px;

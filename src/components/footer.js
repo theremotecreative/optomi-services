@@ -91,18 +91,21 @@ const FooterCol = styled.div`
         margin-bottom: 20px;
         text-transform: uppercase;
         font-weight: 600;
+        letter-spacing: 1px;
     }
     p {
         font-family: "Helvetica Thin";
         color: #818181;
         font-size: 14px;
         line-height: 1.5;
+        font-weight: 600;
     }
     a {
         font-family: "Helvetica Thin";
         color: #818181;
         text-decoration: none !important;
         transition-duration: .3s;
+        font-weight: 600;
         &:hover {
             color: #fff;
         }

@@ -40,7 +40,7 @@ const HomeParallax = () => {
 
                 <div class={"parallax-content"}>
                     <ParallaxContent 
-                        data-sal="slide-up"
+                        data-sal="slide-down"
                         data-sal-duration="1000"
                         data-sal-delay="300"
                         data-sal-easing="ease"
@@ -130,18 +130,26 @@ const ParallaxContent = styled.div`
     h2 {
         font-family: "Helvetica Thin";
         color: #61b1e8;
-        font-size: 95px;
+        font-size: 77px;
         font-weight: 100;
         text-align: center;
-        line-height: 1;
+        line-height: 26px;
+        position: relative;
+        margin-bottom: 140px;
         .freeland {
             font-family: 'Freeland';
             font-style: italic;
+            font-size: 95px;
+            position: absolute;
+            top: 60px;
+            left: 80px;
         }
         .white {
             font-size: 77px;
             color: #8c9192;
             text-transform: uppercase;
+            position: absolute;
+            top: 120px;
         }
         @media(max-width:420px) {
             font-size: 54px;
