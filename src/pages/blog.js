@@ -22,7 +22,7 @@ const BlogPage = ({ data }) => (
                     </p>
                 ))}
                 </div>
-              <Link to={`/${post.node.slug}`} >
+              <Link to={`/${post.node.slug}`} style={{ textDecoration: "none" }}>
                 <h3 dangerouslySetInnerHTML={{ __html: post.node.title }} />
               </Link>
               <div class={"excerpt"} dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
@@ -105,6 +105,7 @@ const BlogPage = ({ data }) => (
         margin-bottom: 18px !important;
         transform: translateY(72px);
         transition: all .2s;
+        text-decoration: none !important;
     }
     .excerpt {
         p {

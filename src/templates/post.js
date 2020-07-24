@@ -1,32 +1,30 @@
 import React from "react"
 import BlogLayout from "../components/blog-layout"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 
-export default function BlogPost({ data }) {
-  const post = data.allWordpressPost.edges[0].node
-  console.log(post)
-  return (
+const BlogPost = ({ data }) => (
     <BlogLayout>
+      <SEO title={data.wordpressPost.title} description={data.wordpressPost.excerpt} />
       <BlogContainer>
           <article>
-            <FeaturedImg sizes={post.featured_media.localFile.childImageSharp.sizes} alt={post.title} />
-            <h1><span>{post.date}</span>{post.title}</h1>
+            <FeaturedImg sizes={data.wordpressPost.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressPost.title} />
+            <h1><span>{data.wordpressPost.date}</span>{data.wordpressPost.title}</h1>
             <p class={"blog-meta"}><span>Posted in </span>
-            {post.categories.map(category => (
+            {data.wordpressPost.categories.map(category => (
                   <span>
                       {category.name}
                   </span>
               ))}
-              <span> by </span>{post.author.name}</p>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              <span> by </span>{data.wordpressPost.author.name}</p>
+            <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
           </article>
           <p>Contact Form here</p>
       </BlogContainer>
     </BlogLayout>
-  )
-}
+)
 
 const BlogContainer = styled.div`
   max-width: 1140px;
@@ -75,29 +73,27 @@ const FeaturedImg = styled(Img)`
     margin-bottom: 25px;
 `
 
+export default BlogPost
+
 export const query = graphql`
-  query {
-    allWordpressPost {
-      edges {
-        node {
-          title
-          content
-          date(formatString: "DD MMM")
-          author {
-            name
-          }
-          categories {
-            name
-          }
-          featured_media {
-            localFile {
-                childImageSharp {
-                    sizes(maxWidth: 2000) {
-                        ...GatsbyImageSharpSizes
-                    }
+query($id: Int!) {
+  wordpressPost(wordpress_id: { eq: $id }) {
+      title
+      content
+      date(formatString: "DD MMM")
+      author {
+        name
+      }
+      categories {
+        name
+      }
+      featured_media {
+        localFile {
+            childImageSharp {
+                sizes(maxWidth: 2000) {
+                    ...GatsbyImageSharpSizes
                 }
             }
-          }
         }
       }
     }
