@@ -6,7 +6,6 @@ import "./layout.css"
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 import LogoLarge from "../components/logos/logo-large"
-import HeaderLogo from "../components/header-logo"
 import SideMainMenu from "../components/sidebar-menu"
 import Footer from "../components/footer"
 
@@ -34,7 +33,11 @@ class BlogLayout extends Component {
                     <PageTransition>
                     <MainContent>
                         <HeaderMain>
-                            <LogoLarge/>
+                            <Link
+                                to="/"
+                                >
+                              <LogoLarge/>
+                            </Link>
                             <MenuRight>
                                 <button onClick={() => this.toggleMenu()}>
                                     <p>menu</p>
@@ -78,7 +81,7 @@ const MainContent = styled.div`
     transition-duration: .3s;
     main {
       background-color: #fff;
-      padding-top: 160px;
+      padding-top: 100px;
     }
 `
 
