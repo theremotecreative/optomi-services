@@ -38,6 +38,7 @@ module.exports = {
           "**/home_section", // <== Custom post slug
           "**/team_member", // <== Custom post slug
           "**/custom_page", // <== Custom post slug
+          "**/news", // <== Custom post slug
           "**/media",
           "**/tags",
           "**/taxonomies",
