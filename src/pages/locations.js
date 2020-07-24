@@ -13,7 +13,7 @@ const ContactPage = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            allWordpressWpCustomPage(filter: {categories: {elemMatch: {wordpress_id: {eq: 20}}}}) {
+            allWordpressWpCustomPage(filter: {categories: {elemMatch: {wordpress_id: {eq: 21}}}}) {
                 edges {
                     node {
                         title
@@ -40,38 +40,26 @@ const ContactPage = () => {
                 <SEO title={post.node.title} />
                 <ClientsBanner>
                     <ImageBackground>
-                        
+                        <BackgroundImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
                     </ImageBackground>
 
                     <HeroTitle
                         data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="600"
+                        data-sal-delay="300"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
                         <p>Optomi <span>Professional</span> Services</p>
                     </HeroTitle>
 
-                    <HeroContent>
-                        <ContactImg sizes={post.node.featured_media.localFile.childImageSharp.sizes} alt={post.node.title} />
-                        <ContactInfo
-                        data-sal="zoom-in"
-                        data-sal-duration="1000"
-                        data-sal-delay="300"
-                        data-sal-easing="ease"
-                        dangerouslySetInnerHTML={{ __html: post.node.content }}
-                        />
-                    </HeroContent>
-
-                    <HeroBottom
-                        data-sal="fade"
-                        data-sal-duration="1000"
-                        data-sal-delay="900"
-                        data-sal-easing="ease"
-                    >
-                        <h2>Locations</h2>
-                    </HeroBottom>
+                    <HeroContent
+                    data-sal="slide-left"
+                    data-sal-duration="1000"
+                    data-sal-delay="600"
+                    data-sal-easing="ease"
+                    dangerouslySetInnerHTML={{ __html: post.node.content }}
+                    />
 
                     <HeroSocials
                         data-sal="fade"
@@ -88,16 +76,6 @@ const ContactPage = () => {
                         <p>Locations go here</p>
                     </SectionOneRow>
                 </SectionOne>
-                <SectionTwo>
-                    <SectionTwoRow
-                        data-sal="slide-up"
-                        data-sal-duration="1000"
-                        data-sal-delay="300"
-                        data-sal-easing="ease"
-                    >
-                        <p>Google Map Goes here</p>
-                    </SectionTwoRow>
-                </SectionTwo>
             </Layout>
             
         ))
@@ -117,8 +95,9 @@ const ClientsBanner = styled.div`
         display: block;
     }
 `
-const ContactImg = styled(Img)`
-    width: 70%;
+const BackgroundImg = styled(Img)`
+    height: 100vh;
+    width: 100vw;
     img {
         margin-bottom: 0;
     }
@@ -180,8 +159,8 @@ const HeroContent = styled.div`
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: center;
-    margin-top: 100px;
+    text-align: left;
+    margin-bottom: 35vh;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
@@ -213,7 +192,6 @@ const HeroContent = styled.div`
         z-index: 1;
         font-size: 32px;
         color: #5ab3e8;
-        text-transform: uppercase;
         line-height: 1.2;
         @media(max-width:600px) {
             font-size: 24px;
@@ -225,63 +203,6 @@ const HeroContent = styled.div`
     }
     @media(max-width:600px) {
         margin-top: 30px;
-    }
-`
-
-const ContactInfo = styled.div`
-    width: 30%;
-    text-align: right;
-    margin-bottom: 100px;
-    a {
-        font-family: "Helvetica Thin";
-        line-height: 1.1;
-        margin: 0px;
-        padding: 0px;
-        letter-spacing: 0px;
-        font-weight: 400;
-        font-size: 23px;
-        color: #8b8f91;
-        text-decoration: none;
-        text-transform: lowercase;
-        &:hover {
-            color: #61b1e8;
-        }
-    }
-    p {
-        font-family: "Helvetica Thin";
-        margin-bottom: 5px;
-        &.small {
-            color: #61b1e8;
-            font-size: 18px;
-            line-height: 1;
-            letter-spacing: 1px;
-        }
-        &.big {
-            font-size: 35px;
-            line-height: 1;
-        }
-        &.phone {
-            font-weight: 400;
-            font-size: 23px;
-            line-height: 1.1;
-            color: rgb(140, 145, 146);
-        }
-    }
-`
-
-const HeroBottom = styled.div`
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    h2 {
-        font-family: "Helvetica Thin";
-        color: #5ab3e8;
-        font-size: 60px;
-        line-height: 1;
-        font-weight: 100;
-        text-transform: uppercase;
     }
 `
 
@@ -323,20 +244,6 @@ const SectionOneRow = styled.div`
         flex-wrap: wrap;
         justify-content: center;
     }
-`
-
-const SectionTwo = styled.div`
-    background-color: #000;
-    padding-bottom: 50px;
-`
-
-const SectionTwoRow = styled.div`
-    max-width: 1140px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
 `
 
 export default ContactPage
