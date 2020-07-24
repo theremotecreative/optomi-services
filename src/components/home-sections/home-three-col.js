@@ -91,7 +91,7 @@ const HomeThreeCol = () => {
             <ThreeColSection id={"optomi-provalus-section"}>
 
                 <ThreeColContent 
-                    data-sal="slide-up"
+                    data-sal="slide-right"
                     data-sal-duration="1000"
                     data-sal-delay="300"
                     data-sal-easing="ease"
@@ -165,10 +165,11 @@ const HomeThreeCol = () => {
 
 const ThreeColSection = styled.div`
     background-color: #000;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 80px;
     position: relative;
     z-index: 1;
+    border-top: 1px solid #8c9192;
 `
 
 const ThreeColContent = styled.div`

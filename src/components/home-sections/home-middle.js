@@ -43,8 +43,8 @@ const HomeMiddle = () => {
                 </ImageBackground>
 
                 <MiddleContent 
-                    data-sal="slide-up"
-                    data-sal-duration="1000"
+                    data-sal="zoom-in"
+                    data-sal-duration="600"
                     data-sal-delay="300"
                     data-sal-easing="ease"
                     dangerouslySetInnerHTML={{ __html: post.node.content }}
@@ -83,6 +83,7 @@ const ImageBackground = styled.div`
     top: 0;
     left: 0;
     z-index: 1;
+    border-top: 1px solid #8c9192;
 `
 
 const MiddleContent = styled.div`

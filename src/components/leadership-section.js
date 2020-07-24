@@ -40,7 +40,7 @@ class LeadershipSection extends Component {
                 <LeadershipMenu>
                     {data.allWordpressWpTeamMember.edges.map((post, i) => (
                         <LeadershipLink>
-                            <button id={"selector_" + i} class={"team-selector"} onClick={() => this.clickSelector(i)}>{post.node.acf.menu_title}</button>
+                            <button id={"selector_" + i} class={"team-selector"} onClick={() => this.clickSelector(i)} className= {i === this.state.activeSlide ? "active" : "inactive"}>{post.node.acf.menu_title}</button>
                         </LeadershipLink>
                     ))}
                 </LeadershipMenu>
@@ -55,7 +55,6 @@ class LeadershipSection extends Component {
                                         class={"slide-content"}
                                         data-sal="slide-up"
                                         data-sal-duration="1000"
-                                        data-sal-delay="300"
                                         data-sal-easing="ease"
                                     >
                                         <h3>{post.node.title}</h3>
@@ -143,8 +142,31 @@ const LeadershipLink = styled.div`
         outline: 0;
         padding: 20px;
         color: #fff;
+        position: relative;
         &:hover {
             cursor: pointer;
+        }
+        &.active {
+            background-color: #8B8F8E;
+            &:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 28px;
+            width: 52px;
+            left: calc(50% - 26px);
+            bottom: -20px;
+            background: #8b8f91;
+            display: inline-block;
+            border-bottom-left-radius: 90px;
+            border-bottom-right-radius: 90px;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
         }
         @media(max-width:950px) {
             font-size: 14px;
@@ -237,6 +259,7 @@ const LeadershipSlide = styled.div`
         }
         .slide-content {
             z-index: 1;
+            transition-delay: 1s;
             h3 {
                 color: #fff;
                 font-weight: 100;
@@ -255,7 +278,7 @@ const LeadershipSlide = styled.div`
                 margin-bottom: 15px;
                 background-color: #ffffff;
                 height: 1px;
-                width: 32%;
+                width: 100%;
             }
             ${MemberCopy} {
                 p {
@@ -280,7 +303,7 @@ const LeadershipSlide = styled.div`
         opacity: 1;
         visibility: visible;
         .slide-overlay { 
-            background-color: rgba(0,0,0,.5);
+            background-color: rgba(0,0,0,.3);
         }
         ${BackgroundImgBW} {
             opacity: 1;
@@ -297,6 +320,11 @@ const LeadershipSlide = styled.div`
         }
     }
     &:first-child {
+        .slide-row {
+            justify-content: flex-end;
+        }
+    }
+    &:nth-child(4) {
         .slide-row {
             justify-content: flex-end;
         }
@@ -319,6 +347,7 @@ const LeadershipSlide = styled.div`
             background-color: rgba(0,0,0,.5) !important;
             text-align: center;
             .slide-content {
+                transition-delay: .3s;
                 hr,
                 a {
                     display: none;
