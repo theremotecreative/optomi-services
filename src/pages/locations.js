@@ -73,7 +73,13 @@ const ContactPage = () => {
                     </HeroSocials>
                 </ClientsBanner>
                 <SectionOne id={"section_one"}>
-                    <SectionOneRow>
+                    <SectionOneRow
+                    data-sal="slide-up"
+                    data-sal-duration="1000"
+                    data-sal-delay="300"
+                    data-sal-easing="ease"
+                    >
+                        <h2>Locations</h2>
                         <LocationsSection/>
                     </SectionOneRow>
                 </SectionOne>
@@ -229,21 +235,26 @@ const HeroSocials = styled.div`
 `
 
 const SectionOne = styled.div`
-    background-color: #fff;
+    background-color: #000;
 `
 
 const SectionOneRow = styled.div`
     max-width: 1140px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 60px;
     margin: 0 auto;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     @media(max-width:1000px) {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    h2 {
+        font-size: 60px;
+        font-family: "Helvetica Thin";
+        line-height: 60px;
+        font-weight: 400;
+        color: rgb(97, 177, 232);
+        text-transform: uppercase;
+        text-align: center;
     }
 `
 
