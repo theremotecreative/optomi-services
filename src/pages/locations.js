@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import LocationsSection from "../components/locations-section"
 
 import { FaTwitter } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -73,7 +74,7 @@ const ContactPage = () => {
                 </ClientsBanner>
                 <SectionOne id={"section_one"}>
                     <SectionOneRow>
-                        <p>Locations go here</p>
+                        <LocationsSection/>
                     </SectionOneRow>
                 </SectionOne>
             </Layout>

@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 
+import PostFooter from "../components/post-footer"
+
 const BlogPost = ({ data }) => (
     <BlogLayout>
       <SEO title={data.wordpressPost.title} description={data.wordpressPost.excerpt} />
@@ -21,7 +23,7 @@ const BlogPost = ({ data }) => (
               <span> by </span>{data.wordpressPost.author.name}</p>
             <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
           </article>
-          <p>Contact Form here</p>
+          <PostFooter/>
       </BlogContainer>
     </BlogLayout>
 )

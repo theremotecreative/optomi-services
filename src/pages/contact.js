@@ -95,7 +95,8 @@ const ContactPage = () => {
                         data-sal-delay="300"
                         data-sal-easing="ease"
                     >
-                        <p>Google Map Goes here</p>
+                        <h2>Headquarters:</h2>
+                        <iframe src={"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6620.504788182909!2d-84.359856!3d33.934636!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x27a06b6049a47d0f!2sOne%20Glenlake!5e0!3m2!1sen!2sin!4v1595793193336!5m2!1sen!2sin"} width={"100%"} height={"450"} frameborder={"0"} style={{ border: "0" }} allowfullscreen={""} aria-hidden={"false"} tabindex={"0"}></iframe>
                     </SectionTwoRow>
                 </SectionTwo>
             </Layout>
@@ -337,6 +338,16 @@ const SectionTwoRow = styled.div`
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    h2 {
+        font-family: "Helvetica Thin";
+        color: #5ab3e8;
+        font-size: 42px;
+        line-height: 1;
+        font-weight: 100;
+        text-align: left;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
 `
 
 export default ContactPage

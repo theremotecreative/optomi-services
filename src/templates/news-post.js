@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 
+import PostFooter from "../components/post-footer"
+
 const NewsPost = ({ data }) => (
     <NewsLayout>
       <SEO title={data.wordpressWpNews.title} description={data.wordpressWpNews.excerpt} />
@@ -15,7 +17,7 @@ const NewsPost = ({ data }) => (
             <p class={"blog-meta"}><span>Posted by </span>{data.wordpressWpNews.author.name}</p>
             <div dangerouslySetInnerHTML={{ __html: data.wordpressWpNews.content }} />
           </article>
-          <p>Contact Form here</p>
+          <PostFooter/>
       </BlogContainer>
     </NewsLayout>
 )
