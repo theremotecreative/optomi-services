@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
+import ParticleBG from "../../components/particle-bg"
 import { FaChevronDown } from 'react-icons/fa'
 
 const HomeCanvas = () => {
@@ -25,6 +26,8 @@ const HomeCanvas = () => {
         
         data.allWordpressWpHomeSection.edges.map(post => (
             <CanvasSection id={"canvas_section"}>
+
+                <ParticleBG/>
 
                 <CanvasContent 
                     data-sal="slide-up"
@@ -58,6 +61,7 @@ const CanvasContent = styled.div`
     padding-left: 20px;
     width: 100%;
     margin: 0 auto;
+    z-index: 2;
     p {
         font-family: "Helvetica Thin";
         font-size: 32px;
@@ -86,7 +90,7 @@ const CanvasContent = styled.div`
                 transition-duration: .3s;
                 &:hover {
                     color: #000;
-                    background-color: rgba(0,0,0,0);
+                    background-color: #fff;
                 }
             }
         }
