@@ -62,7 +62,7 @@ const HomeMiddle = () => {
 const MiddleSection = styled.div`
     position: relative;
     min-height: 120vh;
-    min-width: 100vw;
+    min-width: 100%;
     height: 100%;
     width: 100%;
     background-color: #000;
@@ -70,7 +70,7 @@ const MiddleSection = styled.div`
 
 const BackgroundImg = styled(Img)`
     height: 120vh;
-    width: 100vw;
+    width: 100%;
     img {
         margin-bottom: 0;
     }
@@ -79,7 +79,7 @@ const BackgroundImg = styled(Img)`
 const ImageBackground = styled.div`
     position: absolute;
     height: 120vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1;

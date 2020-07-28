@@ -43,9 +43,9 @@ const AwardsPage = () => {
                     </ImageBackground>
 
                     <HeroTitle
-                        data-sal="fade"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="600"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
@@ -53,7 +53,7 @@ const AwardsPage = () => {
                     </HeroTitle>
 
                     <HeroContent 
-                        data-sal="slide-up"
+                        data-sal="zoom-in"
                         data-sal-duration="1000"
                         data-sal-delay="300"
                         data-sal-easing="ease"
@@ -64,7 +64,6 @@ const AwardsPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -80,7 +79,7 @@ const AwardsPage = () => {
 const ClientsBanner = styled.div`
     position: relative; 
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     height: 100%;
     width: 100%;
     display: flex;
@@ -99,7 +98,7 @@ const BackgroundImg = styled(Img)`
 const ImageBackground = styled.div`
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
 `
@@ -170,6 +169,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 1.2s;
     a {
         display: inline-block;
         &:first-child {

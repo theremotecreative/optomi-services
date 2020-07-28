@@ -108,7 +108,7 @@ const ParallaxSection = styled.div`
 
 const BackgroundImg = styled(Img)`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     img {
         margin-bottom: 0;
     }
@@ -117,7 +117,7 @@ const BackgroundImg = styled(Img)`
 const ImageBackground = styled.div`
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 0;

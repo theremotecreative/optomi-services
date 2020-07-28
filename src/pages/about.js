@@ -50,9 +50,9 @@ const AboutPage = () => {
                     </ImageBackground>
 
                     <HeroTitle
-                        data-sal="fade"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="600"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
@@ -70,7 +70,7 @@ const AboutPage = () => {
                     <HeroBottom
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
@@ -79,7 +79,6 @@ const AboutPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -129,7 +128,7 @@ const ClientsBanner = styled.div`
 `
 const BackgroundImg = styled(Img)`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     img {
         margin-bottom: 0;
     }
@@ -138,7 +137,7 @@ const BackgroundImg = styled(Img)`
 const ImageBackground = styled.div`
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
 `
@@ -208,6 +207,13 @@ const HeroContent = styled.div`
             font-family: 'Freeland';
             font-size: 95px;
             padding-right: 170px;
+            @media(max-width:600px) {
+                font-size: 72px;
+            }
+            @media(max-width:500px) {
+                font-size: 55px;
+                padding: 0;
+            }
         }
         .blue {
             color: #5ab3e8;
@@ -239,6 +245,9 @@ const HeroContent = styled.div`
         @media(max-width:500px) {
             font-size: 18px;
             color: #fff;
+        }
+        @media(max-width:360px) {
+            display: none;
         }
     }
     @media(max-width:600px) {
@@ -279,6 +288,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 1.2s;
     a {
         display: inline-block;
         &:first-child {
@@ -317,6 +327,9 @@ const SectionOneContent = styled.div`
         font-weight: 100;
         font-size: 45px;
         line-height: 1;
+        @media(max-width:500px) {
+            font-size: 32px;
+        }
     }
     p {
         font-family: "Helvetica Thin";
@@ -330,6 +343,15 @@ const SectionOneContent = styled.div`
             font-family: 'Freeland';
             font-size: 78px;
             line-height: 28px;
+            @media(max-width:600px) {
+                font-size: 55px;
+            }
+            @media(max-width:500px) {
+                font-size: 42px;
+            }
+        }
+        @media(max-width:500px) {
+            font-size: 20px;
         }
     }
 `
@@ -358,6 +380,12 @@ const SectionTwoContent = styled.div`
         font-family: 'Freeland';
         font-size: 80px;
         line-height: 1;
+        @media(max-width:600px) {
+            font-size: 55px;
+        }
+        @media(max-width:500px) {
+            font-size: 42px;
+        }
     }
     hr {
         background-color: #8b8f91;
@@ -376,12 +404,21 @@ const SectionTwoContent = styled.div`
             font-family: 'Freeland';
             font-size: 78px;
             line-height: 28px;
+            @media(max-width:600px) {
+                font-size: 55px;
+            }
+            @media(max-width:500px) {
+                font-size: 42px;
+            }
         }
         &.sub-text {
             color: #8b8f91;
             font-size: 22px;
             letter-spacing: 1px;
             font-weight: 600;
+        }
+        @media(max-width:500px) {
+            font-size: 20px;
         }
     }
 `

@@ -62,6 +62,13 @@ const LocationsMain = styled.div`
       width: 50%;
       text-align: center;
   }
+  @media(max-width:767px) {
+    max-width: 500px;
+    margin: 0 auto;
+    > div {
+      width: 100%;
+    }
+  }
 `
 const Location = styled.div`
   button {
@@ -134,6 +141,11 @@ const ModalContent = styled.div`
                 cursor: pointer;
                 color: #000;
             }
+    }
+    @media(max-width:767px) {
+      iframe {
+        height: 400px;
+      }
     }
 `
   

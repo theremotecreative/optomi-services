@@ -109,7 +109,7 @@ const ContactPage = () => {
 const ClientsBanner = styled.div`
     position: relative; 
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     height: 100%;
     width: 100%;
     display: flex;
@@ -124,12 +124,22 @@ const ContactImg = styled(Img)`
     img {
         margin-bottom: 0;
     }
+    @media(max-width:1100px) {
+        width: 100%;
+        position: absolute !important;
+        left: 0;
+        bottom: 0; 
+        opacity: .5;
+    }
+    @media(max-width:600px) {
+        display: none;
+    }
 `
 
 const ImageBackground = styled.div`
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
 `
@@ -218,12 +228,11 @@ const HeroContent = styled.div`
         text-transform: uppercase;
         line-height: 1.2;
         @media(max-width:600px) {
-            font-size: 24px;
+            font-size: 24px !important;
         }
-        @media(max-width:500px) {
-            font-size: 18px;
-            color: #fff;
-        }
+    }
+    @media(max-width:1100px) {
+        justify-content: flex-end;
     }
     @media(max-width:600px) {
         margin-top: 30px;
@@ -269,6 +278,20 @@ const ContactInfo = styled.div`
             color: rgb(140, 145, 146);
         }
     }
+    @media(max-width:1100px) {
+        width: 100%;
+        margin-right: 100px;
+        z-index: 1;
+        p {
+            &.phone {
+                color: #fff;
+            }
+        }
+    }
+    @media(max-width:600px) {
+        margin-right: 0px;
+        text-align: center;
+    }
 `
 
 const HeroBottom = styled.div`
@@ -284,6 +307,9 @@ const HeroBottom = styled.div`
         line-height: 1;
         font-weight: 100;
         text-transform: uppercase;
+        @media(max-width:470px) {
+            font-size: 24px;
+        }
     }
 `
 

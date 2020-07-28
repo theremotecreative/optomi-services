@@ -257,7 +257,7 @@ const ClientsBanner = styled.div`
 
 const BackgroundImg = styled(Img)`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     img {
         margin-bottom: 0;
     }
@@ -267,7 +267,7 @@ const ImageBackground = styled.div`
     background-color: #000;
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
 `
