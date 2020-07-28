@@ -38,6 +38,21 @@ const NewsPage = ({ data }) => (
         height: 50vh;
         position: relative;
     }
+    @media(max-width:1100px) {
+      article {
+        width: 50%;
+      }
+    }
+    @media(max-width:767px) {
+      article {
+        width: 100%;
+      }
+    }
+    @media(max-width:500px) {
+      article {
+        height: 80vh;
+      }
+    }
   `
 
   const BackgroundImg = styled.div`
@@ -53,6 +68,12 @@ const NewsPage = ({ data }) => (
             margin-bottom: 0;
         }
     }
+    @media(max-width:500px) {
+      height: 80vh;
+      .gatsby-image-wrapper {
+        height:80vh;
+    }
+  }
   `
 
   const PostContent = styled.div`
@@ -110,6 +131,9 @@ const NewsPage = ({ data }) => (
             }
         }
     }
+    @media(max-width:500px) {
+      height: 80vh;
+  }
   `
 
   

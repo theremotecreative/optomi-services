@@ -133,9 +133,9 @@ const ServicesPage = () => {
                     </ImageBackground>
 
                     <HeroTitle
-                        data-sal="fade"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="600"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
@@ -161,7 +161,7 @@ const ServicesPage = () => {
                     <HeroBottom
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
@@ -170,7 +170,6 @@ const ServicesPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -450,7 +449,8 @@ const SectionLinks = styled.div`
         background: transparent;
         background-color: transparent;
         border: none;
-        margin: 0 25px;
+        outline: 0;
+        margin: 10px 25px;
         &:hover {
             cursor: pointer;
         }
@@ -491,6 +491,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 1.2s;
     a {
         display: inline-block;
         &:first-child {
@@ -514,6 +515,10 @@ const SectionOneRow = styled.div`
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    @media(max-width:800px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 `
 
 const SectionOneImage = styled(Img)`
@@ -534,11 +539,27 @@ const MainSections = styled.div`
         .gatsby-image-wrapper {
             max-width: 420px;
         }
+        @media(max-width:800px) {
+            .col-one {
+                order: 2;
+            }
+            .col-two {
+                order: 1;
+            }
+        }
     }
     #section_five {
         background-color: #74777b;
         .gatsby-image-wrapper {
             max-width: 420px;
+        }
+        @media(max-width:800px) {
+            .col-one {
+                order: 2;
+            }
+            .col-two {
+                order: 1;
+            }
         }
     }
     .main-section {
@@ -579,6 +600,21 @@ const MainSections = styled.div`
                 font-size: 22px;
                 line-height: 1.2;
                 margin-bottom: 5px;
+            }
+            @media(max-width:800px) {
+                flex-wrap: wrap;
+                .col-one,
+                .col-two {
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .col-copy,
+                .gatsby-image-wrapper {
+                    max-width: 400px !important;
+                    margin: 0 auto;
+                    margin-bottom: 35px;
+                }
             }
         }
     }
@@ -624,12 +660,34 @@ const SectionSixRow = styled.div`
                 height: 42px;
             }
         }
+        @media(max-width:800px) {
+            flex-wrap: wrap;
+            .link-col {
+                max-width: 100%;
+                .gatsby-image-wrapper {
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                    max-width: 300px;
+                }
+            }
+            .plus-col {
+                max-width: 100%;
+                .gatsby-image-wrapper {
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                    max-width: 45px;
+                }
+            }
+
+        }
     }
 `
 
 const SectionSixCopy = styled.div`
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 40px;
+    max-width: 850px;
     p {
         font-family: "Helvetica Thin";
         color: #fff;
@@ -638,7 +696,6 @@ const SectionSixCopy = styled.div`
         .freeland {
             color: #5ab3e8;
             font-family: 'Freeland';
-            font-style: italic;
             font-size: 72px;
             line-height: 52px;
             padding-top: 15px;

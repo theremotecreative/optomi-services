@@ -125,7 +125,6 @@ const ClientsPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -336,6 +335,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 1.2s;
     a {
         display: inline-block;
         &:first-child {

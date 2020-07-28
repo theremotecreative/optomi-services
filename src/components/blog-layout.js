@@ -74,7 +74,7 @@ const FullPage = styled.div`
 `
 
 const MainContent = styled.div`
-    width: 100vw;
+    width: 100%;
     position: relative;
     top:0;
     left:0;
@@ -129,6 +129,13 @@ const HeaderMain = styled.div`
     img {
       margin-bottom: 0;
     }
+    @media(max-width:600px) {
+      width: 71px;
+      height: 35px;
+    }
+  }
+  @media(max-width:600px) {
+    padding: 1.45rem 1.0875rem;
   }
 `
 

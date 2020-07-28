@@ -107,9 +107,9 @@ const CandidatesPage = () => {
                     </ImageBackground>
 
                     <HeroTitle
-                        data-sal="fade"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="600"
                         data-sal-easing="ease"
                     >
                         <h1>{post.node.title}</h1>
@@ -127,7 +127,7 @@ const CandidatesPage = () => {
                     <HeroBottom
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
+                        data-sal-delay="900"
                         data-sal-easing="ease"
                     >
                         <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
@@ -136,7 +136,6 @@ const CandidatesPage = () => {
                     <HeroSocials
                         data-sal="fade"
                         data-sal-duration="1000"
-                        data-sal-delay="300"
                         data-sal-easing="ease"
                     >
                         <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
@@ -338,6 +337,9 @@ const HeroContent = styled.div`
             color: #5ab3e8;
             font-size: 95px;
             line-height: 1;
+            @media(max-width:500px) {
+                font-size: 62px;
+            }
         }
         @media(max-width:600px) {
             font-size: 42px;
@@ -375,6 +377,13 @@ const HeroContent = styled.div`
     @media(max-width:600px) {
         margin-top: 30px;
     }
+    @media(max-width:370px) {
+        p {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
 `
 
 const HeroBottom = styled.div`
@@ -410,6 +419,7 @@ const HeroSocials = styled.div`
     z-index: 1;
     display: flex;
     flex-direction: column;
+    transition-delay: 1.2s;
     a {
         display: inline-block;
         &:first-child {
@@ -455,6 +465,18 @@ const MainSections = styled.div`
             &:hover {
                 background-color: #4d4d4d;
             }
+            @media(max-width:500px) {
+                width: auto;
+                padding: 20px 35px;
+            }
+        }
+        @media(max-width:900px) {
+            .col-one {
+                order: 2;
+            }
+            .col-two {
+                order: 1;
+            }
         }
     }
     #section_two {
@@ -489,6 +511,10 @@ const MainSections = styled.div`
             transition-duration: .3s;
             &:hover {
                 background-color: #c1c1c1;
+            }
+            @media(max-width:500px) {
+                width: auto;
+                padding: 20px 35px;
             }
         }
         
@@ -532,6 +558,18 @@ const MainSections = styled.div`
             &:hover {
                 background-color: #c1c1c1;
             }
+            @media(max-width:500px) {
+                width: auto;
+                padding: 20px 35px;
+            }
+        }
+        @media(max-width:900px) {
+            .col-one {
+                order: 2;
+            }
+            .col-two {
+                order: 1;
+            }
         }
     }
     .main-section {
@@ -551,6 +589,21 @@ const MainSections = styled.div`
             .col-two {
                 width: 50%;
                 padding-left: 30px;
+            }
+            @media(max-width:900px) {
+                flex-wrap: wrap;
+                text-align: center;
+                .col-one,
+                .col-two {
+                    width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .gatsby-image-wrapper {
+                    max-width: 400px;
+                    margin: 0 auto;
+                    margin-bottom: 35px;
+                }
             }
         }
     }
@@ -596,6 +649,10 @@ const SectionFour = styled.div`
             &:hover {
                 background-color: #4d4d4d;
             }
+            @media(max-width:500px) {
+                width: auto;
+                padding: 20px 35px;
+            }
         }
     }
 `
@@ -626,6 +683,7 @@ const SectionFive = styled.div`
             font-size: 50px;
             line-height: 1;
             font-family: "Helvetica Thin";
+            padding: 0 20px;
         }
     }
 `
@@ -636,6 +694,10 @@ const FiveImg = styled(Img)`
     margin: 0 auto;
     img {
         margin-bottom: 0;
+    }
+    @media(max-width:800px) {
+        height: auto;
+        width: 100%;
     }
 `
 
