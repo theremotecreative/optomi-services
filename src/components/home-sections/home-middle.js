@@ -107,6 +107,7 @@ const MiddleContent = styled.div`
                     padding-right: 20px;
                     margin: 0 auto;
                     display: flex;
+                    justify-content: space-between;
                     > div {
                         margin-top: 30vh;
                         margin-bottom: 30vh;
@@ -188,6 +189,14 @@ const MiddleContent = styled.div`
                             }
                         }
                     }
+                    @media(max-width:1200px) {
+                        max-width: 990px;
+                        .panel-grid-cell {
+                            &:last-child {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
                     @media(max-width:1050px) {
                         max-width: 800px;
                         display: block;
@@ -201,6 +210,7 @@ const MiddleContent = styled.div`
                                 margin-top: 0;
                                 margin-bottom: 0;
                                 width: 100%;
+                                padding-left: 0;
                             }
                         }
                     }

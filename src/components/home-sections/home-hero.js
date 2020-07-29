@@ -50,8 +50,8 @@ const HomeHero = () => {
                 <HeroLogo>
                     <div className="hero-logo-imgs">
                         <div 
-                        data-sal="slide-right"
-                        data-sal-duration="1000"
+                        data-sal="fade"
+                        data-sal-duration="1500"
                         data-sal-delay="300"
                         data-sal-easing="ease"
                         className="logo-1"
@@ -59,8 +59,8 @@ const HomeHero = () => {
                             <OLogo/>
                         </div>
                         <div 
-                        data-sal="slide-right"
-                        data-sal-duration="1000"
+                        data-sal="fade"
+                        data-sal-duration="1500"
                         data-sal-delay="600"
                         data-sal-easing="ease"
                         className="logo-2"
@@ -68,8 +68,8 @@ const HomeHero = () => {
                             <PLogo/>
                         </div>
                         <div 
-                        data-sal="slide-right"
-                        data-sal-duration="1000"
+                        data-sal="fade"
+                        data-sal-duration="1500"
                         data-sal-delay="900"
                         data-sal-easing="ease"
                         className="logo-3"
@@ -82,11 +82,22 @@ const HomeHero = () => {
                     data-sal-duration="1000"
                     data-sal-easing="ease"
                     />
-                    <p
-                    data-sal="slide-up"
-                    data-sal-duration="1000"
-                    data-sal-easing="ease"
-                    >Optomi <span>Professional</span> Services</p>
+                    <p>
+                        <span
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-easing="ease"
+                        >Optomi</span> <span 
+                        class={"blue"}
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-easing="ease"
+                        >Professional</span> <span
+                        data-sal="slide-right"
+                        data-sal-duration="1000"
+                        data-sal-easing="ease"
+                        >Services</span>
+                        </p>
                 </HeroLogo>
 
                 <HeroContent 
@@ -157,6 +168,7 @@ const HeroLogo = styled.div`
     .hero-logo-imgs {
         display: flex;
         align-items: center;
+        margin-right: 10px;
         img {
             margin-bottom: 0;
         }
@@ -201,7 +213,7 @@ const HeroLogo = styled.div`
         background-color: rgba(255, 255, 255, 0.5);
         margin-bottom: 5px;
         z-index: 1;
-        transition-delay: 1.2s;
+        transition-delay: 2s;
     }
     p {
         font-family: "Helvetica Thin";
@@ -211,9 +223,19 @@ const HeroLogo = styled.div`
         z-index: 1;
         font-size: 25px;
         color: rgb(140, 145, 146);
-        transition-delay: 1.5s;
         span {
-            color: #5ab3e8;
+            &:nth-child(1){
+                transition-delay: 1.2s;
+            }
+            &:nth-child(2){
+                transition-delay: 1.4s;
+            }
+            &:nth-child(3){
+                transition-delay: 1.6s;
+            }
+            &.blue {
+                color: #5ab3e8;
+            }
         }
         @media(max-width:420px) {
             font-size: 18px;

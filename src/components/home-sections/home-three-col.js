@@ -205,6 +205,9 @@ const ThreeColContent = styled.div`
             line-height: 1.1;
         }
     }
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
 `
 
 const HoverCols = styled.div`
@@ -216,6 +219,9 @@ const HoverCols = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
     @media(max-width:1000px) {
         justify-content: center;
     }
@@ -231,6 +237,10 @@ const BackgroundImg = styled(Img)`
     width: 312px;
     img {
         margin-bottom: 0;
+    }
+    @media(max-width:1200px) {
+        height: 350px;
+        width: 263px;
     }
     @media(max-width:1000px) {
         height: 268px;
@@ -276,6 +286,10 @@ const ImageHover = styled.div`
     ${BackgroundImg} {
         position: absolute !important;
     }
+    @media(max-width:1200px) {
+        height: 350px;
+        width: 263px;
+    }
     @media(max-width:1000px) {
         height: 268px;
         width: 200px;
@@ -298,6 +312,9 @@ const HoverCol = styled.div`
         ${ImageHover} {
             top: 0;
         }
+    }
+    @media(max-width:1200px) {
+        width: 263px;
     }
     @media(max-width:1000px) {
         width: 200px;
@@ -328,6 +345,7 @@ const ViewButton = styled.div`
         color: #fff;
         text-decoration: none;
         font-size: 15px;
+        font-weight: bold;
         text-align: center;
         transition-duration: .5s;
         &:hover {

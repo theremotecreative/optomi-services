@@ -123,7 +123,7 @@ const LeadershipLink = styled.div`
     }
 `
 const BackgroundImg = styled(Img)`
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     transition-duration: 2s;
     img {
@@ -140,7 +140,7 @@ const BackgroundImg = styled(Img)`
 `
 
 const BackgroundImgBW = styled(Img)`
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     top: 0;
     left: 0;
@@ -157,7 +157,7 @@ const BackgroundImgBW = styled(Img)`
 
 const LeadershipSlider = styled.div`
     position: relative;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     overflow: hidden;
     @media(max-width:700px) {
@@ -180,14 +180,14 @@ const LeadershipSlide = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-color: #000;
     .slide-overlay {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         align-items: center;
@@ -200,6 +200,9 @@ const LeadershipSlide = styled.div`
             padding-left: 20px;
             margin: 0 auto;
             display: flex;
+            @media(max-width:1200px) {
+                max-width: 990px;
+            }
         }
         .slide-content {
             z-index: 1;
@@ -247,7 +250,7 @@ const LeadershipSlide = styled.div`
         opacity: 1;
         visibility: visible;
         .slide-overlay { 
-            background-color: rgba(0,0,0,.3);
+            background-color: rgba(0,0,0,.5);
         }
         ${BackgroundImgBW} {
             opacity: 1;

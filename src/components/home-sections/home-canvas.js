@@ -49,7 +49,7 @@ const HomeCanvas = () => {
 const CanvasSection = styled.div`
     background-color: #ffffff;
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -67,7 +67,7 @@ const CanvasContent = styled.div`
         font-size: 32px;
         font-weight: bold;
         letter-spacing: 1px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         line-height: 40px;
         &.canvas-buttons {
             a {
@@ -77,7 +77,7 @@ const CanvasContent = styled.div`
                 background-color: rgba(0,0,0,1);
                 font-size: 20px;
                 font-weight: 500;
-                margin: 15px;
+                margin: 15px 30px;
                 padding: 18px 0;
                 z-index: 7;
                 line-height: 17px;
@@ -95,13 +95,16 @@ const CanvasContent = styled.div`
             }
         }
     }
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
 `
 
 const ArrowIcon = styled.div`
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
     text-align: center;
     button {
         color: #000;

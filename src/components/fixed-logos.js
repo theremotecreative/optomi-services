@@ -24,7 +24,7 @@ const FixedLogos = () => (
 
 const LogoCol = styled.div`
   position: fixed;
-  top: 15px;
+  top: 20px;
   left: 5px;
   width: 90px;
   padding: 10px;

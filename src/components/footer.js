@@ -67,6 +67,9 @@ const FooterRow = styled.div`
     padding-bottom: 50px;
     margin: 0 auto;
     display: flex;
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
     @media(max-width:700px) {
         flex-wrap: wrap;
     }

@@ -190,7 +190,7 @@ const ServicesPage = () => {
                     <div class={"main-section"} id={"section_two"}>
                         <div class={"main-section-row"}>
                             <div class={"col-one"}
-                            data-sal="slide-right"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -221,7 +221,7 @@ const ServicesPage = () => {
                                 <Img sizes={post.node.acf.section_three.image.localFile.childImageSharp.sizes} alt={"Services Image"}/>
                             </div>
                             <div class={"col-two"}
-                            data-sal="slide-left"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -236,7 +236,7 @@ const ServicesPage = () => {
                     <div class={"main-section"} id={"section_four"}>
                         <div class={"main-section-row"}>
                             <div class={"col-one"}
-                            data-sal="slide-right"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -267,7 +267,7 @@ const ServicesPage = () => {
                                 <Img sizes={post.node.acf.section_five.section_five_image.localFile.childImageSharp.sizes} alt={"Services Image"}/>
                             </div>
                             <div class={"col-two"}
-                            data-sal="slide-left"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -356,6 +356,9 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        @media(max-width:1200px) {
+            font-size: 82px;
+        }
         @media(max-width:500px) {
             font-size: 52px;
         }
@@ -404,6 +407,11 @@ const HeroContent = styled.div`
         font-weight: 100;
         line-height: 1;
         color: #5ab3e8;
+        transition-duration: .3s;
+        @media(max-width:1200px) {
+            max-width: 600px;
+            font-size: 49px;
+        }
         @media(max-width:600px) {
             font-size: 42px;
         }
@@ -423,6 +431,10 @@ const HeroContent = styled.div`
         font-size: 23px;
         color: #fff;
         line-height: 1.2;
+        transition-duration: .3s;
+        @media(max-width:1200px) {
+            font-size: 20px;
+        }
         @media(max-width:600px) {
             font-size: 24px;
         }
@@ -453,6 +465,9 @@ const SectionLinks = styled.div`
         margin: 10px 25px;
         &:hover {
             cursor: pointer;
+        }
+        @media(max-width:1200px) {
+            font-size: 23px;
         }
     }
 
@@ -601,6 +616,9 @@ const MainSections = styled.div`
                 line-height: 1.2;
                 margin-bottom: 5px;
             }
+            @media(max-width:1200px) {
+                max-width: 990px;
+            }
             @media(max-width:800px) {
                 flex-wrap: wrap;
                 .col-one,
@@ -647,18 +665,25 @@ const SectionSixRow = styled.div`
     .section-links {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         .link-col {
             max-width: 250px;
             width: 100%;
+            @media(max-width:1200px) {
+                max-width: 215px;
+            }
         }
         .plus-col {
             max-width: 45px;
             width: 100%;
+            margin-bottom: 10px;
             .gatsby-image-wrapper {
                 width: 45px;
                 height: 42px;
             }
+        }
+        @media(max-width:1200px) {
+            padding: 0 40px;
         }
         @media(max-width:800px) {
             flex-wrap: wrap;
@@ -680,6 +705,9 @@ const SectionSixRow = styled.div`
             }
 
         }
+    }
+    @media(max-width:1200px) {
+        max-width: 990px;
     }
 `
 
@@ -706,7 +734,7 @@ const SectionSixCopy = styled.div`
 
 const SectionSixSub = styled.div`
     padding: 0 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     z-index: 1;
     p {
         font-family: "Helvetica Thin";

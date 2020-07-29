@@ -104,6 +104,12 @@ const ParallaxSection = styled.div`
             z-index: 1;
         }
     }
+    @media(max-width:420px) {
+        height: auto;
+        .parallax-content {
+            padding: 100px 20px;
+        }
+    }
 `
 
 const BackgroundImg = styled(Img)`
@@ -111,6 +117,12 @@ const BackgroundImg = styled(Img)`
     width: 100%;
     img {
         margin-bottom: 0;
+        left: auto !important;
+        right: -450px;
+        object-position: center right !important;
+    }
+    @media(max-width:850px) {
+        display: none;
     }
 `
 
@@ -143,6 +155,15 @@ const ParallaxContent = styled.div`
             position: absolute;
             top: 60px;
             left: 80px;
+            @media(max-width:600px) {
+                font-size: 72px;
+                top: 50px;
+            }
+            @media(max-width:420px) {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
         }
         .white {
             font-size: 77px;
@@ -150,9 +171,22 @@ const ParallaxContent = styled.div`
             text-transform: uppercase;
             position: absolute;
             top: 120px;
+            @media(max-width:600px) {
+                font-size: 42px;
+                top: 100px;
+            }
+            @media(max-width:420px) {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+        @media(max-width:600px) {
+            font-size: 42px;
         }
         @media(max-width:420px) {
-            font-size: 54px;
+            line-height: 1;
+            margin-bottom: 20px;
         }
     }
     p {
