@@ -3,6 +3,7 @@ module.exports = {
     title: `OPS`,
     description: `Identifying and creating the best tech talent to help define the technology of tomorrow`,
     author: `@theremotecreative`,
+    siteUrl: `https://optomiservices.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
