@@ -146,7 +146,7 @@ const CandidatesPage = () => {
                     <div class={"main-section"} id={"section_one"}>
                         <div class={"main-section-row"}>
                             <div class={"col-one"}
-                            data-sal="slide-right"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -178,7 +178,7 @@ const CandidatesPage = () => {
                                 <Img sizes={post.node.acf.section_two.image.localFile.childImageSharp.sizes} alt={"Candidates Image"}/>
                             </div>
                             <div class={"col-two"}
-                            data-sal="slide-left"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -194,7 +194,7 @@ const CandidatesPage = () => {
                     <div class={"main-section"} id={"section_three"}>
                         <div class={"main-section-row"}>
                             <div class={"col-one"}
-                            data-sal="slide-right"
+                            data-sal="fade"
                             data-sal-duration="1000"
                             data-sal-delay="300"
                             data-sal-easing="ease"
@@ -284,6 +284,9 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        @media(max-width:1200px) {
+            font-size: 82px;
+        }
         @media(max-width:500px) {
             font-size: 52px;
         }
@@ -341,8 +344,9 @@ const HeroContent = styled.div`
                 font-size: 62px;
             }
         }
-        @media(max-width:600px) {
-            font-size: 42px;
+        @media(max-width:1200px) {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
         @media(max-width:500px) {
             font-size: 28px;
@@ -365,6 +369,10 @@ const HeroContent = styled.div`
         margin-bottom: 35px;
         &.blue {
             color: #5ab3e8;
+            @media(max-width:1200px) {
+                font-size: 21px;
+                margin-bottom: 25px;
+            }
         }
         @media(max-width:600px) {
             font-size: 24px;
@@ -465,6 +473,10 @@ const MainSections = styled.div`
             &:hover {
                 background-color: #4d4d4d;
             }
+            @media(max-width:1200px) {
+                width: 300px;
+                padding: 20px;
+            }
             @media(max-width:500px) {
                 width: auto;
                 padding: 20px 35px;
@@ -512,6 +524,10 @@ const MainSections = styled.div`
             &:hover {
                 background-color: #c1c1c1;
             }
+            @media(max-width:1200px) {
+                width: 300px;
+                padding: 20px;
+            }
             @media(max-width:500px) {
                 width: auto;
                 padding: 20px 35px;
@@ -535,12 +551,13 @@ const MainSections = styled.div`
             font-size: 20px;
             font-weight: 100;
             line-height: 1.1;
-            margin-bottom: 45px;
-            .freeland {
+            margin-bottom: 0px;
+            &.freeland {
                 font-family: 'Freeland';
                 color: #fff;
                 font-size: 32px;
                 line-height: 1.1;
+                margin-bottom: 45px;
             }
         }
         a {
@@ -557,6 +574,10 @@ const MainSections = styled.div`
             transition-duration: .3s;
             &:hover {
                 background-color: #c1c1c1;
+            }
+            @media(max-width:1200px) {
+                width: 300px;
+                padding: 20px;
             }
             @media(max-width:500px) {
                 width: auto;
@@ -589,6 +610,9 @@ const MainSections = styled.div`
             .col-two {
                 width: 50%;
                 padding-left: 30px;
+            }
+            @media(max-width:1200px) {
+                max-width: 990px
             }
             @media(max-width:900px) {
                 flex-wrap: wrap;
@@ -649,6 +673,10 @@ const SectionFour = styled.div`
             &:hover {
                 background-color: #4d4d4d;
             }
+            @media(max-width:1200px) {
+                width: 300px;
+                padding: 20px;
+            }
             @media(max-width:500px) {
                 width: auto;
                 padding: 20px 35px;
@@ -689,8 +717,8 @@ const SectionFive = styled.div`
 `
 
 const FiveImg = styled(Img)`
-    height: 750px;
-    width: 703px;
+    height: auto;
+    width: 650px;
     margin: 0 auto;
     img {
         margin-bottom: 0;

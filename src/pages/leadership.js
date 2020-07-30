@@ -119,6 +119,9 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        @media(max-width:1200px) {
+            font-size: 82px;
+        }
         @media(max-width:500px) {
             font-size: 52px;
         }
@@ -166,6 +169,10 @@ const HeroContent = styled.div`
         line-height: 1.2;
         max-width: 1200px;
         margin: 0 auto;
+        @media(max-width:1200px) {
+            font-size: 28px;
+            max-width: 990px;
+        }
         @media(max-width:600px) {
             font-size: 24px;
         }
@@ -191,6 +198,7 @@ const HeroBottom = styled.div`
         line-height: 1.1;
         text-align: center;
         margin: 0;
+        margin-bottom: 120px;
         color: #fff;
     }
     button {

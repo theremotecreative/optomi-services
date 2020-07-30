@@ -134,6 +134,9 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        @media(max-width:1200px) {
+            font-size: 82px;
+        }
         @media(max-width:500px) {
             font-size: 52px;
         }
@@ -211,6 +214,9 @@ const HeroContent = styled.div`
             font-size: 18px;
             color: #fff;
         }
+    }
+    @media(max-width:1200px) {
+        max-width: 990px;
     }
     @media(max-width:600px) {
         margin-top: 30px;

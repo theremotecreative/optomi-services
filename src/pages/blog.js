@@ -94,7 +94,6 @@ const BlogPage = ({ data }) => (
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 100%);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
     .categories {

@@ -14,7 +14,7 @@ import HomeBottom from "../components/home-sections/home-bottom"
 
 const IndexPage = () => (
   <HomeLayout>
-    <SEO title="Home" />
+    <SEO title="Optomi Professional Services" />
     <HomeHero/>
     <HomeCanvas/>
     <HomeSimple/>

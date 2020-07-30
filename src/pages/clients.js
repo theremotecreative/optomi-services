@@ -164,7 +164,7 @@ const ClientsPage = () => {
                 </SectionOne>
                 <SectionTwo>
                     <SectionTwoRow
-                        data-sal="slide-up"
+                        data-sal="slide-right"
                         data-sal-duration="1000"
                         data-sal-delay="300"
                         data-sal-easing="ease"
@@ -221,6 +221,10 @@ const HeroTitle = styled.div`
         font-size: 90px;
         font-weight: 100;
         line-height: 1;
+        text-align: center;
+        @media(max-width:1200px) {
+            font-size: 82px;
+        }
         @media(max-width:500px) {
             font-size: 52px;
         }
@@ -274,6 +278,9 @@ const HeroContent = styled.div`
             font-family: 'Freeland';
             font-size: 91px;
         }
+        @media(max-width:1200px) {
+            font-size: 65px;
+        }
         @media(max-width:600px) {
             font-size: 42px;
         }
@@ -289,6 +296,11 @@ const HeroContent = styled.div`
         color: #5ab3e8;
         text-transform: uppercase;
         line-height: 1.2;
+        @media(max-width:1200px) {
+            font-size: 31px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
         @media(max-width:600px) {
             font-size: 24px;
         }
@@ -360,6 +372,9 @@ const SectionOneRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
     @media(max-width:1000px) {
         flex-wrap: wrap;
         justify-content: center;
@@ -369,6 +384,9 @@ const SectionOneRow = styled.div`
 const SectionOneCol = styled.div`
     width: 30%;
     text-align: center;
+    @media(max-width:1200px) {
+        width: 31%;
+    }
     @media(max-width:1000px) {
         width: 100%;
         max-width: 550px;
@@ -395,6 +413,7 @@ const SectionOneCopy = styled.div`
         font-family: "Helvetica Thin";
         font-weight: 600;
         color: #000;
+        margin-top: -25px;
     }
     p {
         font-size: 22px;
@@ -421,6 +440,9 @@ const SectionTwoRow = styled.div`
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    @media(max-width:1200px) {
+        max-width: 990px;
+    }
 `
 
 const SectionTwoImage = styled(Img)`
