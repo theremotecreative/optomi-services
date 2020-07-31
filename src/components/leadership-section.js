@@ -190,11 +190,14 @@ const LeadershipLink = styled.div`
     }
 `
 const BackgroundImg = styled(Img)`
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
     transition-duration: 2s;
     img {
         margin-bottom: 0;
+    }
+    @media(max-width:1200px) {
+        height: 80vh;
     }
     @media(max-width:700px) {
         height: 50vh;
@@ -207,7 +210,7 @@ const BackgroundImg = styled(Img)`
 `
 
 const BackgroundImgBW = styled(Img)`
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
@@ -217,6 +220,9 @@ const BackgroundImgBW = styled(Img)`
     img {
         margin-bottom: 0;
     }
+    @media(max-width:1200px) {
+        height: 80vh;
+    }
     @media(max-width:700px) {
         display: none !important;
     }
@@ -224,9 +230,12 @@ const BackgroundImgBW = styled(Img)`
 
 const LeadershipSlider = styled.div`
     position: relative;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
+    @media(max-width:1200px) {
+        height: 80vh;
+    }
     @media(max-width:700px) {
         height: auto;
         display: flex;
@@ -247,19 +256,22 @@ const LeadershipSlide = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     background-color: #000;
     .slide-overlay {
         position: absolute;
         top: 0;
         left: 0;
-        height: 80vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         background-color: rgba(0,0,0,.0);
         transition-duration: 1s;
+        @media(max-width:1200px) {
+            height: 80vh;
+        }
         .slide-row {
             max-width: 1140px;
             width: 100%;
@@ -342,6 +354,9 @@ const LeadershipSlide = styled.div`
         .slide-row {
             justify-content: flex-end;
         }
+    }
+    @media(max-width:1200px) {
+        height: 80vh;
     }
     @media(max-width:700px) {
         position: relative;
