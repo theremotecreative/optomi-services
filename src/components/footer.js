@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import FooterLogo from "../components/logos/footer-logo"
+import InstaFeed from "../components/insta-feed"
 import { FaTwitter } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
@@ -44,6 +45,7 @@ const Footer = () => (
         </FooterCol>
         <FooterCol>
             <h4>Experience OPS</h4>
+            <InstaFeed/>
         </FooterCol>
       </FooterRow>
         <FooterBottom>

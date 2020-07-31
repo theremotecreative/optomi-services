@@ -246,8 +246,11 @@ const LeadershipSlider = styled.div`
 const MemberCopy = styled.div`
     @media(max-width:700px) {
         p {
-            font-size: 14px;
+            font-size: 18px;
             line-height: 1.1;
+            br {
+                display: none;
+            }
         }
     }
 `
