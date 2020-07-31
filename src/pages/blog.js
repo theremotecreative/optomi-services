@@ -27,7 +27,7 @@ const BlogPage = ({ data }) => (
               </Link>
               <div class={"excerpt"} dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
               <p class={"meta"}>
-                {post.node.date} | by {post.node.author.name}
+                {post.node.date} | by {post.node.acf.custom_author}
               </p>
               
             </PostContent>
@@ -175,9 +175,6 @@ const BlogPage = ({ data }) => (
             title
             excerpt
             slug
-            author {
-              name
-            }
             categories {
                 name
               }
@@ -190,6 +187,9 @@ const BlogPage = ({ data }) => (
                     }
                 }
               }
+            }
+            acf {
+              custom_author
             }
           }
         }

@@ -92,6 +92,10 @@ class PostFooter extends Component {
         line-height: 4rem;
         font-weight: 100;
         max-width: 600px;
+        @media(max-width:640px) {
+            font-size: 42px;
+            line-height: 1.2;
+        }
     }
     .contact-button {
         button {
@@ -110,6 +114,24 @@ class PostFooter extends Component {
                 background: #0c62fb;
                 cursor: pointer;
             }
+            @media(max-width:640px) {
+                padding: 10px 30px;
+            }
+        }
+    }
+    @media(max-width:900px) {
+        flex-wrap: wrap;
+        .footer-copy {
+            width: 100%;
+            h3 {
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 35px;
+            }
+        }
+        .contact-button {
+            width: 100%;
+            text-align: center;
         }
     }
   `
@@ -133,9 +155,18 @@ class PostFooter extends Component {
     border: 1px solid #888;
     width: 50%;
     position: relative;
+    @media(max-width:1200px) {
+        width: 75%;
+    }
+    @media(max-width:900px) {
+        width: 90%;
+    }
     form {
         width: 60%;
         margin: 0 auto;
+        @media(max-width:800px) {
+            width: 100%;
+        }
     }
     h1 {
         font-family: "Raleway";
@@ -157,6 +188,9 @@ class PostFooter extends Component {
         width: 50%;
         display: inline-block;
         padding: 0 15px;
+        @media(max-width:470px) {
+            width: 100%;
+        }
         &.full {
             width: 100%;
         }

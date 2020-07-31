@@ -20,7 +20,7 @@ const BlogPost = ({ data }) => (
                       {category.name}
                   </span>
               ))}
-              <span> by </span>{data.wordpressPost.author.name}</p>
+              <span> by </span>{data.wordpressPost.acf.custom_author}</p>
             <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
           </article>
           <PostFooter/>
@@ -83,9 +83,6 @@ query($id: Int!) {
       title
       content
       date(formatString: "DD MMM")
-      author {
-        name
-      }
       categories {
         name
       }
@@ -97,6 +94,9 @@ query($id: Int!) {
                 }
             }
         }
+      }
+      acf {
+        custom_author
       }
     }
   }

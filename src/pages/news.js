@@ -20,7 +20,7 @@ const NewsPage = ({ data }) => (
               </Link>
               <div class={"excerpt"} dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
               <p class={"meta"}>
-                {post.node.date} | by {post.node.author.name}
+                {post.node.date} | by {post.node.acf.custom_author}
               </p>
               
             </PostContent>
@@ -147,9 +147,6 @@ const NewsPage = ({ data }) => (
             title
             excerpt
             slug
-            author {
-              name
-            }
             date(formatString: "MMMM DD, YYYY")
             featured_media {
               localFile {
@@ -159,6 +156,9 @@ const NewsPage = ({ data }) => (
                     }
                 }
               }
+            }
+            acf {
+              custom_author
             }
           }
         }

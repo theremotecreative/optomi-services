@@ -14,7 +14,7 @@ const NewsPost = ({ data }) => (
           <article>
             <FeaturedImg sizes={data.wordpressWpNews.featured_media.localFile.childImageSharp.sizes} alt={data.wordpressWpNews.title} />
             <h1><span>{data.wordpressWpNews.date}</span>{data.wordpressWpNews.title}</h1>
-            <p class={"blog-meta"}><span>Posted by </span>{data.wordpressWpNews.author.name}</p>
+            <p class={"blog-meta"}><span>Posted by </span>{data.wordpressWpNews.acf.custom_author}</p>
             <div dangerouslySetInnerHTML={{ __html: data.wordpressWpNews.content }} />
           </article>
           <PostFooter/>
@@ -77,9 +77,6 @@ query($id: Int!) {
       title
       content
       date(formatString: "DD MMM")
-      author {
-        name
-      }
       featured_media {
         localFile {
             childImageSharp {
@@ -88,6 +85,9 @@ query($id: Int!) {
                 }
             }
         }
+      }
+      acf {
+        custom_author
       }
     }
   }
