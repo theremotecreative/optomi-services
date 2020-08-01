@@ -21,6 +21,15 @@ const ServicesPage = () => {
                     node {
                         title
                         content
+                        featured_media {
+                            localFile {
+                                childImageSharp {
+                                    sizes(maxWidth: 2000) {
+                                        ...GatsbyImageSharpSizes
+                                    }
+                                }
+                            }
+                        }
                         acf {
                             section_one {
                                 section_one_image {
@@ -116,6 +125,7 @@ const ServicesPage = () => {
                                 link_three
                                 section_sub
                             }
+                            meta_description
                         }
                     }
                 }
@@ -127,7 +137,11 @@ const ServicesPage = () => {
         
         data.allWordpressWpCustomPage.edges.map(post => (
             <Layout>
-                <SEO title="Services" />
+                <SEO 
+                title={post.node.title} 
+                description={post.node.acf.meta_description}
+                image={post.node.featured_media.localFile.childImageSharp}
+                />
                 <ClientsBanner>
                     <ImageBackground>
                     </ImageBackground>

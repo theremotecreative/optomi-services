@@ -22,6 +22,16 @@ const LeadershipPage = () => {
                         content
                         acf {
                             bottom_subtitle
+                            meta_description
+                        }
+                        featured_media {
+                            localFile {
+                                childImageSharp {
+                                    sizes(maxWidth: 2000) {
+                                        ...GatsbyImageSharpSizes
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -33,7 +43,11 @@ const LeadershipPage = () => {
         
         data.allWordpressWpCustomPage.edges.map(post => (
             <Layout>
-                <SEO title={post.node.title} />
+                <SEO 
+                title={post.node.title} 
+                description={post.node.acf.meta_description}
+                image={post.node.featured_media.localFile.childImageSharp}
+                />
                 <ClientsBanner>
                     <ImageBackground>
                     </ImageBackground>

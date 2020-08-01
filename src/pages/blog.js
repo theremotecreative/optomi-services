@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const BlogPage = ({ data }) => (
     <BlogLayout>
-      <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Blog"/>
       <BlogGrid>
         {data.allWordpressPost.edges.map(post => (
           <article>

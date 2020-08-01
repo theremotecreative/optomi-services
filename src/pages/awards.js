@@ -26,6 +26,9 @@ const AwardsPage = () => {
                                 }
                             }
                         }
+                        acf {
+                            meta_description
+                        }
                     }
                 }
             }
@@ -36,7 +39,11 @@ const AwardsPage = () => {
         
         data.allWordpressWpCustomPage.edges.map(post => (
             <Layout>
-                <SEO title={post.node.title} />
+                <SEO 
+                title={post.node.title} 
+                description={post.node.acf.meta_description}
+                image={post.node.featured_media.localFile.childImageSharp}
+                />
                 <ClientsBanner>
                     <ImageBackground>
                         

@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const NewsPage = ({ data }) => (
     <BlogLayout>
-      <SEO title="News" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="News"/>
       <BlogGrid>
         {data.allWordpressWpNews.edges.map(post => (
           <article>
