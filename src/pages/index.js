@@ -38,7 +38,7 @@ const IndexPage = () => {
       <HomeLayout>
         <SEO 
         title="Optomi Professional Services" 
-        image={post.node.featured_media.localFile.childImageSharp}
+        image={post.node.featured_media.localFile.childImageSharp.sizes}
         />
         <HomeHero/>
         <HomeCanvas/>

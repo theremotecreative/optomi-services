@@ -140,7 +140,7 @@ const ServicesPage = () => {
                 <SEO 
                 title={post.node.title} 
                 description={post.node.acf.meta_description}
-                image={post.node.featured_media.localFile.childImageSharp}
+                image={post.node.featured_media.localFile.childImageSharp.sizes}
                 />
                 <ClientsBanner>
                     <ImageBackground>

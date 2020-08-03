@@ -12,7 +12,7 @@ const NewsPost = ({ data }) => (
       <SEO 
         title={data.wordpressWpNews.title} 
         description={data.wordpressWpNews.acf.meta_description}
-        image={data.wordpressWpNews.featured_media.localFile.childImageSharp}
+        image={data.wordpressWpNews.featured_media.localFile.childImageSharp.sizes}
         />
       <BlogContainer>
           <article>
