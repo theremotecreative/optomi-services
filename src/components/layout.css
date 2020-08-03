@@ -50,6 +50,10 @@
   src: url("../static/fonts/raleway/Raleway-Bold.ttf");
 } 
 
+@font-face {
+  font-family: "Antonio";
+  src: url("../static/fonts/antonio/Antonio-Bold.ttf");
+} 
 
 /* Layout */
 

@@ -102,7 +102,7 @@ const HomeHero = () => {
 
                 <HeroContent 
                     data-sal="fade"
-                    data-sal-duration="1000"
+                    data-sal-duration="2000"
                     data-sal-easing="ease"
                     dangerouslySetInnerHTML={{ __html: post.node.content }}
                 />

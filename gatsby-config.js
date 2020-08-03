@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `OPS`,
     description: `Identifying and creating the best tech talent to help define the technology of tomorrow`,
-    author: `@theremotecreative`,
+    author: `@optomi_`,
     siteUrl: `https://optomiservices.com/`,
   },
   plugins: [
