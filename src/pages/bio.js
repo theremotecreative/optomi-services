@@ -88,6 +88,51 @@ class BioPage extends Component {
                                 <RegisterForm/>
                             </ModalContent>
                         </CustomModal>
+                        <div type="hidden" style={{ display: 'none' }}>
+                        <form
+                            name="Register"
+                            method="post"
+                            action="/thank-you/"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                            >
+                            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                            <input type="hidden" name="form-name" value="Register" />
+                            <p class={"hidden"}>
+                                <label>
+                                Don’t fill this out:{" "}
+                                <input name="bot-field" />
+                                </label>
+                            </p>
+                            <p class={"full"}>
+                                <label htmlFor="name">
+                                Name
+                                <input type="text" name="name" placeholder="Enter your name"/>
+                                </label>
+                            </p>
+                            <p class={"full"}>
+                                <label  htmlFor="title">
+                                Title
+                                <input type="text" name="title" placeholder="Enter your title"  />
+                                </label>
+                            </p>
+                            <p class={"full"}>
+                                <label  htmlFor="company">
+                                Company
+                                <input type="text" name="company" placeholder="Enter your company"/>
+                                </label>
+                            </p>
+                            <p class={"full"}>
+                                <label  htmlFor="email">
+                                Email
+                                <input type="email" name="email" placeholder="Enter your email" />
+                                </label>
+                            </p>
+                            <p class={"button"}>
+                                <button type="submit" class={"submit"}>Send</button>
+                            </p>
+                            </form>
+                        </div>
                     </div>
                 ))}
             </WebinarLayout>
