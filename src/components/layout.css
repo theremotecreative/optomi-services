@@ -3,56 +3,67 @@
 @font-face {
   font-family: "Helvetica Thin";
   src: url("../static/fonts/helvetica/helveticaneue-thin-webfont.woff");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Helvetica Light";
   src: url("../static/fonts/helvetica/HelveticaNeue-Light.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Helvetica Regular";
   src: url("../static/fonts/helvetica/HelveticaNeue.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Helvetica Medium";
   src: url("../static/fonts/helvetica/HelveticaNeue-Medium.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Helvetica Medium Italic";
   src: url("../static/fonts/helvetica/HelveticaNeue-MediumItalic.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Antonio Bold";
   src: url("../static/fonts/antonio/Antonio-Bold.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Freeland";
   src: url("../static/fonts/freeland/freeland.woff");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Raleway";
   src: url("../static/fonts/raleway/Raleway-Regular.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Raleway SemiBold";
   src: url("../static/fonts/raleway/Raleway-SemiBold.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Raleway Bold";
   src: url("../static/fonts/raleway/Raleway-Bold.ttf");
+  font-display: swap;
 } 
 
 @font-face {
   font-family: "Antonio";
   src: url("../static/fonts/antonio/Antonio-Bold.ttf");
+  font-display: swap;
 } 
 
 /* Layout */
