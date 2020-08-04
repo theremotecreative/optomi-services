@@ -1,6 +1,6 @@
 import React from "react"
 
-export default () => (
+const ContactForm = (props) => (
     <form name="Contact" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
         <input type="hidden" name="form-name" value="Contact" />
         <p class="hidden">
@@ -36,3 +36,5 @@ export default () => (
         </p>
     </form>
 )
+
+export default ContactForm
