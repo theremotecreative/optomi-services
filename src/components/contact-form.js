@@ -1,8 +1,8 @@
 import React from "react"
 
 export default () => (
-    <form name="contact" method="post" netlify-honeypot="bot-field" netlify action="/thank-you/">
-        <input type="hidden" name="form-name" value="contact" />
+    <form name="Contact" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
+        <input type="hidden" name="form-name" value="Contact" />
         <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
