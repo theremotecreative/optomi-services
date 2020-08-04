@@ -7,10 +7,10 @@ export default () => (
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
         <p>
-            <label>Name* <input type="text" name="name" placeholder="Enter your name"/></label>   
+            <label htmlFor="name">Name* <input type="text" name="name" placeholder="Enter your name"/></label>   
         </p>
         <p>
-            <label>Country* 
+            <label htmlFor="country">Country* 
                 <select name="country">
                     <option value="united states">United States</option>
                     <option value="canada">Canada</option>
@@ -20,16 +20,16 @@ export default () => (
             </label>   
         </p>
         <p>
-            <label>Your Email* <input type="email" name="email" placeholder="Enter your email"/></label>
+            <label htmlFor="email">Your Email* <input type="email" name="email" placeholder="Enter your email"/></label>
         </p>
         <p>
-            <label>City* <input type="text" name="city" placeholder="Enter your city name"/></label>   
+            <label htmlFor="city">City* <input type="text" name="city" placeholder="Enter your city name"/></label>   
         </p>
         <p>
-            <label>Phone* <input type="text" name="phone" placeholder="Enter your phone number"/></label>   
+            <label htmlFor="phone">Phone* <input type="text" name="phone" placeholder="Enter your phone number"/></label>   
         </p>
         <p class={"full"}>
-            <label>Message <textarea name="message" placeholder="Enter your message"></textarea></label>
+            <label htmlFor="message">Message <textarea name="message" placeholder="Enter your message"></textarea></label>
         </p>
         <p class={"button"}>
             <button type="submit" name="submit" class={"submit"}>Send</button>

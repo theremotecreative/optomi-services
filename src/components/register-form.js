@@ -51,25 +51,25 @@ export default class RegisterForm extends React.Component {
             </label>
           </p>
           <p class={"full"}>
-            <label>
+            <label htmlFor="name">
               Name
               <input type="text" name="name" placeholder="Enter your name" onChange={this.handleChange} />
             </label>
           </p>
           <p class={"full"}>
-            <label>
+            <label  htmlFor="title">
               Title
               <input type="text" name="title" placeholder="Enter your title" onChange={this.handleChange} />
             </label>
           </p>
           <p class={"full"}>
-            <label>
+            <label  htmlFor="company">
               Company
               <input type="text" name="company" placeholder="Enter your company" onChange={this.handleChange} />
             </label>
           </p>
           <p class={"full"}>
-            <label>
+            <label  htmlFor="email">
               Email
               <input type="email" name="email" placeholder="Enter your email" onChange={this.handleChange} />
             </label>
