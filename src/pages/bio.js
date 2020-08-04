@@ -84,8 +84,8 @@ class BioPage extends Component {
                             <ModalContent>
                                 <button onClick={this.handleCloseModal} class={"close"}>×</button>
                                 <h2>Register Now</h2>
-                                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/success">
-                                    <input type="hidden" name="form-name" value="contact" />
+                                <form name="register" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                                    <input type="hidden" name="form-name" value="register" />
                                     <p class="hidden">
                                         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                                     </p>
@@ -93,10 +93,10 @@ class BioPage extends Component {
                                         <label>Name <input type="text" name="name" placeholder="Enter your name" required/></label>   
                                     </p>
                                     <p class={"full"}>
-                                        <label>Title <input type="text" name="city" placeholder="Enter your title" required/></label>   
+                                        <label>Title <input type="text" name="title" placeholder="Enter your title" required/></label>   
                                     </p>
                                     <p class={"full"}>
-                                        <label>Company <input type="text" name="phone" placeholder="Enter your company name" required/></label>   
+                                        <label>Company <input type="text" name="company" placeholder="Enter your company name" required/></label>   
                                     </p>
                                     <p class={"full"}>
                                         <label>Your Email <input type="email" name="email" placeholder="Enter your email" required/></label>
