@@ -19,7 +19,7 @@ export default () => (
             <label>Your Email <input type="email" name="email" placeholder="Enter your email"/></label>
         </p>
         <p class={"button"}>
-            <button type="submit" class={"submit"}>Send</button>
+            <button type="submit" name="submit" class={"submit"}>Send</button>
         </p>
     </form>
 )
