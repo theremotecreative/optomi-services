@@ -126,6 +126,13 @@ const BlogPage = ({ data }) => (
         transform: translateY(72px);
         transition: all .2s;
         text-decoration: none !important;
+        @media(max-width:500px) {
+          font-size: 28px;
+          line-height: 1.3;
+        }
+        @media(max-width:370px) {
+          font-size: 22px;
+        }
     }
     .excerpt {
         p {

@@ -54,6 +54,7 @@ const ThankYouPage = () => (
     line-height: 39px;
     color: #303030;
     text-transform: uppercase;
+    text-decoration: none !important;
     letter-spacing: 1px;
     transition-duration: .3s;
     &:hover {
