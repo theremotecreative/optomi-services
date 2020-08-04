@@ -7,11 +7,11 @@ export default () => (
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
         <p>
-            <label>Name* <input type="text" name="name" placeholder="Enter your name" required/></label>   
+            <label>Name* <input type="text" name="name" placeholder="Enter your name"/></label>   
         </p>
         <p>
             <label>Country* 
-                <select name="country" required>
+                <select name="country">
                     <option value="united states">United States</option>
                     <option value="canada">Canada</option>
                     <option value="united kingdom">United Kingdom</option>
@@ -20,13 +20,13 @@ export default () => (
             </label>   
         </p>
         <p>
-            <label>Your Email* <input type="email" name="email" placeholder="Enter your email" required/></label>
+            <label>Your Email* <input type="email" name="email" placeholder="Enter your email"/></label>
         </p>
         <p>
-            <label>City* <input type="text" name="city" placeholder="Enter your city name" required/></label>   
+            <label>City* <input type="text" name="city" placeholder="Enter your city name"/></label>   
         </p>
         <p>
-            <label>Phone* <input type="text" name="phone" placeholder="Enter your phone number" required/></label>   
+            <label>Phone* <input type="text" name="phone" placeholder="Enter your phone number"/></label>   
         </p>
         <p class={"full"}>
             <label>Message <textarea name="message" placeholder="Enter your message"></textarea></label>
