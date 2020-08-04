@@ -84,7 +84,7 @@ class BioPage extends Component {
                             <ModalContent>
                                 <button onClick={this.handleCloseModal} class={"close"}>×</button>
                                 <h2>Register Now</h2>
-                                <form name="register" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                                <form name="register" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you/">
                                     <input type="hidden" name="form-name" value="register" />
                                     <p class="hidden">
                                         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
