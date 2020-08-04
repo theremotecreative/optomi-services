@@ -10,7 +10,7 @@ function encode(data) {
 export default class RegisterForm extends React.Component {
   constructor(props) {
     super(props);
-    this.RegisterForm = React.createRef()
+    this.ContactForm = React.createRef()
     this.state = {};
   }
 
@@ -20,7 +20,7 @@ export default class RegisterForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const form = this.RegisterForm.current
+    const form = this.ContactForm.current
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
