@@ -22,6 +22,7 @@ const LeadershipPage = () => {
                         content
                         acf {
                             bottom_subtitle
+                            meta_title
                             meta_description
                         }
                         featured_media {
@@ -44,7 +45,7 @@ const LeadershipPage = () => {
         data.allWordpressWpCustomPage.edges.map(post => (
             <Layout>
                 <SEO 
-                title={post.node.title} 
+                title={post.node.acf.meta_title} 
                 description={post.node.acf.meta_description}
                 image={post.node.featured_media.localFile.childImageSharp.sizes}
                 />

@@ -77,6 +77,7 @@ const ClientsPage = () => {
                                 section_two_link_copy
                                 section_two_link
                             }
+                            meta_title
                             meta_description
                         }
                     }
@@ -90,7 +91,7 @@ const ClientsPage = () => {
         data.allWordpressWpCustomPage.edges.map(post => (
             <Layout>
                 <SEO 
-                title={post.node.title} 
+                title={post.node.acf.meta_title} 
                 description={post.node.acf.meta_description}
                 image={post.node.featured_media.localFile.childImageSharp.sizes}
                 />
