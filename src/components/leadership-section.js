@@ -417,7 +417,7 @@ export default props => (
     <StaticQuery
       query={graphql`
         query {
-            allWordpressWpTeamMember {
+            allWordpressWpTeamMember(sort: {fields: date, order: DESC}) {
                 edges {
                     node {
                         title

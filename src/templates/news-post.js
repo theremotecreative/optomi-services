@@ -10,7 +10,7 @@ import PostFooter from "../components/post-footer"
 const NewsPost = ({ data }) => (
     <NewsLayout>
       <SEO 
-        title={data.wordpressWpNews.title} 
+        title={data.wordpressWpNews.acf.meta_title} 
         description={data.wordpressWpNews.acf.meta_description}
         image={data.wordpressWpNews.featured_media.localFile.childImageSharp.sizes}
         />
@@ -92,6 +92,7 @@ query($id: Int!) {
       }
       acf {
         custom_author
+        meta_title
         meta_description
       }
     }
