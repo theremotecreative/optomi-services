@@ -168,25 +168,25 @@ class WebinarPage extends Component {
                             <p class={"full"}>
                                 <label htmlFor="name">
                                 Name
-                                <input type="text" name="name" placeholder="Enter your name"/>
+                                <input type="text" name="name" placeholder="Enter your name" required/>
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="title">
                                 Title
-                                <input type="text" name="title" placeholder="Enter your title"  />
+                                <input type="text" name="title" placeholder="Enter your title"  required />
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="company">
                                 Company
-                                <input type="text" name="company" placeholder="Enter your company"/>
+                                <input type="text" name="company" placeholder="Enter your company" required/>
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="email">
                                 Email
-                                <input type="email" name="email" placeholder="Enter your email" />
+                                <input type="email" name="email" placeholder="Enter your email" required />
                                 </label>
                             </p>
                             <p class={"button"}>

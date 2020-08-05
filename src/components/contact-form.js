@@ -7,11 +7,11 @@ const ContactForm = (props) => (
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
         <p>
-            <label htmlFor="name">Name* <input type="text" name="name" placeholder="Enter your name"/></label>   
+            <label htmlFor="name">Name* <input type="text" name="name" placeholder="Enter your name" required/></label>   
         </p>
         <p>
             <label htmlFor="country">Country* 
-                <select name="country">
+                <select name="country" required>
                     <option value="united states">United States</option>
                     <option value="canada">Canada</option>
                     <option value="united kingdom">United Kingdom</option>
@@ -20,13 +20,13 @@ const ContactForm = (props) => (
             </label>   
         </p>
         <p>
-            <label htmlFor="email">Your Email* <input type="email" name="email" placeholder="Enter your email"/></label>
+            <label htmlFor="email">Your Email* <input type="email" name="email" placeholder="Enter your email" required/></label>
         </p>
         <p>
-            <label htmlFor="city">City* <input type="text" name="city" placeholder="Enter your city name"/></label>   
+            <label htmlFor="city">City* <input type="text" name="city" placeholder="Enter your city name" required/></label>   
         </p>
         <p>
-            <label htmlFor="phone">Phone* <input type="text" name="phone" placeholder="Enter your phone number"/></label>   
+            <label htmlFor="phone">Phone* <input type="text" name="phone" placeholder="Enter your phone number" required/></label>   
         </p>
         <p class={"full"}>
             <label htmlFor="message">Message <textarea name="message" placeholder="Enter your message"></textarea></label>
