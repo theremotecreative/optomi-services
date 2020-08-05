@@ -353,7 +353,7 @@ const LeadershipSlide = styled.div`
             justify-content: flex-end;
         }
     }
-    &:nth-child(4) {
+    &:nth-child(3) {
         .slide-row {
             justify-content: flex-end;
         }

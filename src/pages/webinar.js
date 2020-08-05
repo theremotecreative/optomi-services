@@ -34,7 +34,7 @@ class WebinarPage extends Component {
                 {data.allWordpressWpCustomPage.edges.map(post => (
                     <div>
                         <SEO 
-                        title={post.node.acf.meta_title} 
+                        title={post.node.title} 
                         description={post.node.acf.meta_description}
                         image={post.node.featured_media.localFile.childImageSharp.sizes}
                         />
@@ -641,7 +641,6 @@ export default props => (
                                 }
                             }
                             speaker_info
-                            meta_title
                             meta_description
                         }
                     }
