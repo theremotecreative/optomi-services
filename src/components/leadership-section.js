@@ -360,6 +360,16 @@ const LeadershipSlide = styled.div`
             justify-content: flex-end;
         }
     }
+    &:nth-child(5),
+    &:nth-child(7),
+    &:nth-child(11) {
+        ${BackgroundImgBW},
+        ${BackgroundImg} {
+            img {
+                object-position: center top !important;
+            }
+        }
+    }
     @media(max-width:1200px) {
         height: 80vh;
     }
