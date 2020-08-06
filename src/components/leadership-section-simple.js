@@ -222,6 +222,8 @@ const LeadershipSlide = styled.div`
         .slide-content {
             z-index: 1;
             transition-delay: 1s;
+            max-width: 500px;
+            width: 100%;
             h3 {
                 color: #fff;
                 font-weight: 100;
