@@ -179,7 +179,7 @@ const LeadershipLink = styled.div`
             opacity: 0;
             visibility: hidden;
         }
-        @media(max-width:950px) {
+        @media(max-width:1200px) {
             font-size: 14px;
             line-height: 1.1;
             padding: 15px 10px;
