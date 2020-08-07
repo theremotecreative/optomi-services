@@ -177,7 +177,7 @@ const ClientsPage = () => {
                     >
                         <SectionTwoImage sizes={post.node.acf.section_two.section_two_image.localFile.childImageSharp.sizes} alt={"Clients Image"}/>
                         <SectionTwoCopy dangerouslySetInnerHTML={{ __html: post.node.acf.section_two.section_two_copy }}/>
-                        <SectionTwoLink to={post.node.acf.section_two.section_two_link}>{post.node.acf.section_two.section_two_link_copy}</SectionTwoLink>
+                        <SectionTwoLink href={post.node.acf.section_two.section_two_link}>{post.node.acf.section_two.section_two_link_copy}</SectionTwoLink>
                     </SectionTwoRow>
                 </SectionTwo>
             </Layout>
