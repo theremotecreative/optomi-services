@@ -64,14 +64,9 @@ class WebinarPage extends Component {
                         data-sal-delay="300"
                         data-sal-easing="ease"
                         >
-                            <button onClick={this.handleOpenModal}>Click Here to Register<br/><span>(Free)</span></button>
+                            <button onClick={this.handleOpenModal} aria-label="Register Button">Click Here to Register<br/><span>(Free)</span></button>
                         </RegisterButton>
-                        <WebinarSub 
-                        data-sal="slide-up"
-                        data-sal-duration="1000"
-                        data-sal-delay="300"
-                        data-sal-easing="ease"
-                        dangerouslySetInnerHTML={{ __html: post.node.acf.sub_info }}/>
+                        <WebinarSub dangerouslySetInnerHTML={{ __html: post.node.acf.sub_info }}/>
                         <WebinarDate
                         data-sal="slide-up"
                         data-sal-duration="1000"
@@ -144,7 +139,7 @@ class WebinarPage extends Component {
                             contentLabel="Minimal Modal Example"
                         >
                             <ModalContent>
-                                <button onClick={this.handleCloseModal} class={"close"}>×</button>
+                                <button onClick={this.handleCloseModal} class={"close"} aria-label="Close Modal">×</button>
                                 <h2>Register Now</h2>
                                 <RegisterForm/>
                             </ModalContent>
@@ -190,7 +185,7 @@ class WebinarPage extends Component {
                                 </label>
                             </p>
                             <p class={"button"}>
-                                <button type="submit" class={"submit"}>Send</button>
+                                <button type="submit" class={"submit"} aria-label="Submit Form">Send</button>
                             </p>
                             </form>
                         </div>
@@ -298,12 +293,11 @@ const WebinarSub = styled.div`
     p {
         font-family: "Helvetica Thin";
         font-weight: bold;
-        font-size: 32px;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 35px;
         letter-spacing: 2px;
         color: #fff;
-        text-align: center;
         @media(max-width:480px) {
             font-size: 20px;
         }

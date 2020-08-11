@@ -167,10 +167,10 @@ const ServicesPage = () => {
                         />
                         <SectionLinks
                         >
-                                <button onClick={() => scrollTo('#section_two')}>Development</button>
-                                <button onClick={() => scrollTo('#section_three')}>Functional Roles</button>
-                                <button onClick={() => scrollTo('#section_four')}>Infastructure</button>
-                                <button onClick={() => scrollTo('#section_five')}>Healthcare IT</button>
+                                <button onClick={() => scrollTo('#section_two')} aria-label="Development Button">Development</button>
+                                <button onClick={() => scrollTo('#section_three')} aria-label="Functional Roles Button">Functional Roles</button>
+                                <button onClick={() => scrollTo('#section_four')} aria-label="Infastructure Button">Infastructure</button>
+                                <button onClick={() => scrollTo('#section_five')} aria-label="Healthcare IT Button">Healthcare IT</button>
                         </SectionLinks>
                     </div>
                     <HeroBottom
