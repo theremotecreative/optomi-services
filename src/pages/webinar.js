@@ -153,35 +153,35 @@ class WebinarPage extends Component {
                             data-netlify-honeypot="bot-field"
                             >
                             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                            <input type="hidden" name="form-name" value="Register" />
+                            <input type="hidden" name="form-name" value="Register" aria-label="Input"/>
                             <p class={"hidden"}>
                                 <label>
                                 Don’t fill this out:{" "}
-                                <input name="bot-field" />
+                                <input name="bot-field" aria-label="Input" />
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label htmlFor="name">
                                 Name
-                                <input type="text" name="name" placeholder="Enter your name" required/>
+                                <input type="text" name="name" placeholder="Enter your name" aria-label="Input" required/>
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="title">
                                 Title
-                                <input type="text" name="title" placeholder="Enter your title"  required />
+                                <input type="text" name="title" placeholder="Enter your title" aria-label="Input" required />
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="company">
                                 Company
-                                <input type="text" name="company" placeholder="Enter your company" required/>
+                                <input type="text" name="company" placeholder="Enter your company" aria-label="Input" required/>
                                 </label>
                             </p>
                             <p class={"full"}>
                                 <label  htmlFor="email">
                                 Email
-                                <input type="email" name="email" placeholder="Enter your email" required />
+                                <input type="email" name="email" placeholder="Enter your email" aria-label="Input" required />
                                 </label>
                             </p>
                             <p class={"button"}>

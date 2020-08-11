@@ -30,6 +30,7 @@ class LocationsSection extends Component {
                     <button 
                     id={"selector_" + i}
                     onClick={() => this.handleOpenModal(i)}
+                    aria-label="Open"
                     >
                         <h3>{post.node.title}</h3>
                         <div dangerouslySetInnerHTML={{ __html: post.node.content }}/>
@@ -44,7 +45,7 @@ class LocationsSection extends Component {
                     data-sal-easing="ease"
                 >
                     <ModalContent>
-                    <button onClick={() => this.handleCloseModal()} class={"close"}>×</button>
+                    <button onClick={() => this.handleCloseModal()} class={"close"} aria-label="Close">×</button>
                     <iframe src={post.node.acf.iframe} width={"100%"} height={"650"} frameborder={"0"} style={{ border: "0" }} allowfullscreen={""} aria-hidden={"false"} tabindex={"0"}></iframe>
                     </ModalContent>
                 </CustomModal>

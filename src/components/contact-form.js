@@ -32,7 +32,7 @@ const ContactForm = (props) => (
             <label htmlFor="message">Message <textarea name="message" placeholder="Enter your message"></textarea></label>
         </p>
         <p class={"button"}>
-            <button type="submit" name="submit" class={"submit"}>Send</button>
+            <button type="submit" name="submit" class={"submit"}  aria-label="Send">Send</button>
         </p>
     </form>
 )

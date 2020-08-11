@@ -38,7 +38,7 @@ const HomeCanvas = () => {
                 />
 
                 <ArrowIcon>
-                    <button onClick={() => scrollTo('#home-identity-row')}><FaChevronDown size={42}/></button>
+                    <button onClick={() => scrollTo('#home-identity-row')} aria-label="Scroll"><FaChevronDown size={42}/></button>
                 </ArrowIcon>
                     
             </CanvasSection>

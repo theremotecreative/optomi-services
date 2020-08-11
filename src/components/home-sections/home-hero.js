@@ -113,7 +113,7 @@ const HomeHero = () => {
                     data-sal-duration="1000"
                     data-sal-easing="ease"
                 >
-                    <button onClick={() => scrollTo('#canvas_section')}><FaChevronDown size={42}/></button>
+                    <button onClick={() => scrollTo('#canvas_section')} aria-label="Scroll"><FaChevronDown size={42}/></button>
                     <p>{post.node.acf.bottom_subtitle}</p>
                 </HeroBottom>
 
@@ -122,8 +122,8 @@ const HomeHero = () => {
                     data-sal-duration="1000"
                     data-sal-easing="ease"
                 >
-                    <a href={post.node.acf.twitter_link} target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
-                    <a href={post.node.acf.linkedin_link} target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={42}/></a>
+                    <a href={post.node.acf.twitter_link} target="_blank" rel="noopener noreferrer" aria-label="Link"><FaTwitter size={42}/></a>
+                    <a href={post.node.acf.linkedin_link} target="_blank" rel="noopener noreferrer" aria-label="Link"><FaLinkedinIn size={42}/></a>
                 </HeroSocials>
                     
             </HeroBanner>

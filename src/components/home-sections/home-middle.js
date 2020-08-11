@@ -51,7 +51,7 @@ const HomeMiddle = () => {
                 />
 
                 <ArrowIcon>
-                    <button onClick={() => scrollTo(post.node.acf.banner_arrow_link)}><FaChevronDown size={42}/></button>
+                    <button onClick={() => scrollTo(post.node.acf.banner_arrow_link)} aria-label="Scroll"><FaChevronDown size={42}/></button>
                 </ArrowIcon>
                     
             </MiddleSection>

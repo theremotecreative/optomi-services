@@ -39,7 +39,7 @@ class BlogLayout extends Component {
                               <LogoLarge/>
                             </Link>
                             <MenuRight>
-                                <button onClick={() => this.toggleMenu()}>
+                                <button onClick={() => this.toggleMenu()} aria-label="Open">
                                     <p>menu</p>
                                     <Hamburger>
                                         <div></div>
@@ -57,7 +57,7 @@ class BlogLayout extends Component {
                     </PageTransition>
 
                     <SidebarMenu>
-                        <button onClick={() => this.toggleMenu()}>X</button>
+                        <button onClick={() => this.toggleMenu()} aria-label="Close">X</button>
                         <SideMainMenu/>
                     </SidebarMenu>
 

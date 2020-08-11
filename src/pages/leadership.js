@@ -78,7 +78,7 @@ const LeadershipPage = () => {
                         data-sal-easing="ease"
                     >
                         <p>{post.node.acf.bottom_subtitle}</p>
-                        <button onClick={() => scrollTo('#section_one')}><FaChevronDown size={32}/></button>
+                        <button onClick={() => scrollTo('#section_one')} aria-label="Scroll"><FaChevronDown size={32}/></button>
                     </HeroBottom>
 
                     <HeroSocials
@@ -87,8 +87,8 @@ const LeadershipPage = () => {
                         data-sal-delay="300"
                         data-sal-easing="ease"
                     >
-                        <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter size={42}/></a>
-                        <a href="https://www.linkedin.com/company/27003541/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={42}/></a>
+                        <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer" aria-label="Link"><FaTwitter size={42}/></a>
+                        <a href="https://www.linkedin.com/company/27003541/" target="_blank" rel="noopener noreferrer" aria-label="Link"><FaLinkedinIn size={42}/></a>
                     </HeroSocials>
                 </ClientsBanner>
                 <LeadershipCustom id={"section_one"}>

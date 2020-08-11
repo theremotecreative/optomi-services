@@ -24,7 +24,7 @@ class LeadershipSectionSimple extends Component {
                 <LeadershipMenu>
                     {data.allWordpressWpTeamMember.edges.map((post, i) => (
                         <LeadershipLink>
-                            <button id={"selector_" + i} class={"team-selector"} onClick={() => this.clickSelector(i)} className= {i === this.state.activeSlide ? "active" : "inactive"}>{post.node.acf.menu_title}</button>
+                            <button id={"selector_" + i} class={"team-selector"} onClick={() => this.clickSelector(i)} className= {i === this.state.activeSlide ? "active" : "inactive"}  aria-label="Selector">{post.node.acf.menu_title}</button>
                         </LeadershipLink>
                     ))}
                 </LeadershipMenu>
