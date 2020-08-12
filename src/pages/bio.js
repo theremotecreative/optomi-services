@@ -92,7 +92,7 @@ class BioPage extends Component {
                         <form
                             name="Register"
                             method="post"
-                            action="/thank-you/"
+                            action="/registration-success/"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
                             >
