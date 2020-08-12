@@ -19,9 +19,9 @@ const Footer = () => (
                 www.optomi.com<br/>
                 678-250-0820</p>
             <div class={"socials"}>
-                <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer"><FaTwitter/></a>
-                <a href="https://www.linkedin.com/company/27003541/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></a>
-                <a href="https://www.instagram.com/optomi_/" target="_blank" rel="noopener noreferrer"><FaInstagram/></a>
+                <a href="https://twitter.com/OptomiServices" target="_blank" rel="noopener noreferrer" aria-label="Link"><FaTwitter/></a>
+                <a href="https://www.linkedin.com/company/27003541/" target="_blank" rel="noopener noreferrer" aria-label="Link"><FaLinkedinIn/></a>
+                <a href="https://www.instagram.com/optomi_/" target="_blank" rel="noopener noreferrer" aria-label="Link"><FaInstagram/></a>
             </div>
         </FooterCol>
         <FooterCol>

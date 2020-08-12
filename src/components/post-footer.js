@@ -24,7 +24,7 @@ class PostFooter extends Component {
     }
     
     render () {
-        const { data } = this.props; 
+        //const { data } = this.props; 
         
       return (
           <FooterRow>
@@ -32,26 +32,26 @@ class PostFooter extends Component {
                   <h3>Let's drive tomorrow's technology together.</h3>
               </div>
             <div class={"contact-button"}>
-            <button onClick={this.handleOpenModal}>Let's Talk</button>
+            <button onClick={this.handleOpenModal} aria-label="Open">Let's Talk</button>
             </div>
             <CustomModal 
                 isOpen={this.state.showModal}
                 contentLabel="Minimal Modal Example"
             >
                 <ModalContent>
-                    <button onClick={this.handleCloseModal} class={"close"}>×</button>
+                    <button onClick={this.handleCloseModal} class={"close"} aria-label="Close">×</button>
                     <h2>Let's Talk</h2>
                     <ContactForm/>
                 </ModalContent>
             </CustomModal>
             <div type="hidden" style={{ display: 'none' }}>
                 <form name="Contact" method="POST" netlify-honeypot="bot-field" action="/thank-you/" data-netlify="true">
-                    <input type="hidden" name="form-name" value="Contact" />
+                    <input type="hidden" name="form-name" value="Contact" aria-label="Input"/>
                     <p class="hidden">
-                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        <label>Don’t fill this out if you're human: <input name="bot-field" aria-label="Input" /></label>
                     </p>
                     <p>
-                        <label htmlFor="name">Name* <input type="text" name="name" placeholder="Enter your name" required/></label>   
+                        <label htmlFor="name">Name* <input type="text" name="name" placeholder="Enter your name" aria-label="Input" required/></label>   
                     </p>
                     <p>
                         <label htmlFor="country">Country* 
@@ -64,19 +64,19 @@ class PostFooter extends Component {
                         </label>   
                     </p>
                     <p>
-                        <label htmlFor="email">Your Email* <input type="email" name="email" placeholder="Enter your email" required/></label>
+                        <label htmlFor="email">Your Email* <input type="email" name="email" placeholder="Enter your email" aria-label="Input" required/></label>
                     </p>
                     <p>
-                        <label htmlFor="city">City* <input type="text" name="city" placeholder="Enter your city name" required/></label>   
+                        <label htmlFor="city">City* <input type="text" name="city" placeholder="Enter your city name" aria-label="Input" required/></label>   
                     </p>
                     <p>
-                        <label htmlFor="phone">Phone* <input type="text" name="phone" placeholder="Enter your phone number" required/></label>   
+                        <label htmlFor="phone">Phone* <input type="text" name="phone" placeholder="Enter your phone number" aria-label="Input" required/></label>   
                     </p>
                     <p class={"full"}>
-                        <label htmlFor="message">Message <textarea name="message" placeholder="Enter your message"></textarea></label>
+                        <label htmlFor="message">Message <textarea name="message" placeholder="Enter your message" aria-label="Input"></textarea></label>
                     </p>
                     <p class={"button"}>
-                        <button type="submit" name="submit" class={"submit"}>Send</button>
+                        <button type="submit" name="submit" class={"submit"} aria-label="Send">Send</button>
                     </p>
                 </form> 
             </div>

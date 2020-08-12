@@ -8,15 +8,15 @@ import SanLogo from "../components/logos/santeka-logo"
 const FixedLogos = () => (
   <LogoCol>
     <Optomi>
-      <a href="http://optomi.com/" target="_blank" rel="noopener noreferrer"><OptomiLogo/></a>
+      <a href="http://optomi.com/" target="_blank" rel="noopener noreferrer" aria-label="Link"><OptomiLogo/></a>
     </Optomi>
     <Divider style={{ marginTop: '10px', marginBottom: '10px' }}/>
     <Pro>
-      <a href="https://provalus.com/" target="_blank" rel="noopener noreferrer"><ProLogo/></a>
+      <a href="https://provalus.com/" target="_blank" rel="noopener noreferrer" aria-label="Link"><ProLogo/></a>
     </Pro>
     <Divider style={{ marginTop: '8px', marginBottom: '0px' }}/>
     <San>
-      <a href="http://www.santeka.com/" target="_blank" rel="noopener noreferrer"><SanLogo/></a>
+      <a href="http://www.santeka.com/" target="_blank" rel="noopener noreferrer" aria-label="Link"><SanLogo/></a>
     </San>
     <Divider/>
   </LogoCol>

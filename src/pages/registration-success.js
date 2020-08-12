@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import NewsLayout from "../components/news-layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
@@ -43,6 +43,7 @@ return(
           <a href={post.node.acf.ics_file.url.source_url} aria-label="Calendar Link">Outlook Calendar</a>
           <a href={post.node.acf.google_link} target="_blank" rel="noopener noreferrer" aria-label="Calendar Link">Google Calendar</a>
         </Buttons>
+        <Return to="/">Return to Homepage</Return>
       </MainContent>
     </NewsLayout>
     ))
@@ -104,6 +105,7 @@ return(
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 35px;
     a {
       font-family: "Raleway";
       display: inline-block;
@@ -124,6 +126,17 @@ return(
         background-color: #303030;
       }
     }
+  `
+
+  const Return = styled(Link)`
+    font-family: "Helvetica Thin";
+    padding: 0 20px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 1px;
   `
   
   export default SuccessPage
