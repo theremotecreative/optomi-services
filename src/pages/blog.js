@@ -44,6 +44,7 @@ const BlogPage = ({ data }) => (
     article {
         width: 33.33%;
         height: 50vh;
+        min-height: 390px;
         position: relative;
     }
     @media(max-width:1100px) {
@@ -67,11 +68,13 @@ const BlogPage = ({ data }) => (
     position: absolute;
     width: 100%;
     height:50vh;
+    min-height: 390px;
     top:0;
     left: 0;
     .gatsby-image-wrapper {
         width: 100%;
         height:50vh;
+        min-height: 390px;
         img {
             margin-bottom: 0;
         }
@@ -88,6 +91,7 @@ const BlogPage = ({ data }) => (
     position: absolute;
     width: 100%;
     height:50vh;
+    min-height: 390px;
     top:0;
     left: 0;
     padding: 0 65px;

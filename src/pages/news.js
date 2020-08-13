@@ -37,6 +37,7 @@ const NewsPage = ({ data }) => (
     article {
         width: 33.33%;
         height: 50vh;
+        min-height: 300px;
         position: relative;
     }
     @media(max-width:1100px) {
@@ -60,11 +61,13 @@ const NewsPage = ({ data }) => (
     position: absolute;
     width: 100%;
     height:50vh;
+    min-height: 300px;
     top:0;
     left: 0;
     .gatsby-image-wrapper {
         width: 100%;
         height:50vh;
+        min-height: 300px;
         img {
             margin-bottom: 0;
         }
@@ -81,6 +84,7 @@ const NewsPage = ({ data }) => (
     position: absolute;
     width: 100%;
     height:50vh;
+    min-height: 300px;
     top:0;
     left: 0;
     padding: 0 35px;
