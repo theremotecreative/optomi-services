@@ -82,6 +82,9 @@ const MainContent = styled.div`
     main {
       background-color: #fff;
       padding-top: 100px;
+      @media(max-width:600px) {
+        padding-top: 81px;
+      }
     }
 `
 

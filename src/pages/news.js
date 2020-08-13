@@ -33,6 +33,7 @@ const NewsPage = ({ data }) => (
   const BlogGrid = styled.div`
     display: flex;
     flex-wrap: wrap;
+    background-color: #000;
     article {
         width: 33.33%;
         height: 50vh;
@@ -82,7 +83,7 @@ const NewsPage = ({ data }) => (
     height:50vh;
     top:0;
     left: 0;
-    padding: 0 65px;
+    padding: 0 35px;
     z-index: 2;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 100%);
@@ -91,18 +92,23 @@ const NewsPage = ({ data }) => (
     flex-direction: column;
     justify-content: flex-end;
     h3 {
+        width: 100%;
         font-family: "Raleway Bold";
         color: #fff;
         text-transform: none;
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 28px;
+        line-height: 1.2;
         font-weight: 700;
         margin-bottom: 18px !important;
         transform: translateY(72px);
         transition: all .2s;
         text-decoration: none !important;
+        @media(max-width:1200px) {
+          font-size: 20px;
+        }
     }
     .excerpt {
+      width: 100%;
         p {
             font-family: "Raleway";
             color: #fff;
@@ -114,6 +120,7 @@ const NewsPage = ({ data }) => (
         }
     }
     .meta {
+      width: 100%;
         font-family: "Raleway SemiBold";
         color: #fff;
         text-transform: uppercase;

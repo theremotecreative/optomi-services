@@ -1,5 +1,5 @@
 import React from "react"
-import NewsLayout from "../components/news-layout"
+import BlogLayout from "../components/blog-layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import PostFooter from "../components/post-footer"
 
 const NewsPost = ({ data }) => (
-    <NewsLayout>
+    <BlogLayout>
       <SEO 
         title={data.wordpressWpNews.acf.meta_title} 
         description={data.wordpressWpNews.acf.meta_description}
@@ -23,7 +23,7 @@ const NewsPost = ({ data }) => (
           </article>
           <PostFooter/>
       </BlogContainer>
-    </NewsLayout>
+    </BlogLayout>
 )
 
 const BlogContainer = styled.div`
