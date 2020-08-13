@@ -41,7 +41,7 @@ return(
           </WebinarDate>
         <Buttons>
           <a href={post.node.acf.ics_file.url.source_url} aria-label="Calendar Link">Outlook Calendar</a>
-          <a href={post.node.acf.google_link} target="_blank" rel="noopener noreferrer" aria-label="Calendar Link">Google Calendar</a>
+          <a href={post.node.acf.ics_file.url.source_url} aria-label="Calendar Link">Apple iCal</a>
         </Buttons>
         <Return to="/">Return to Homepage</Return>
       </MainContent>
@@ -121,6 +121,7 @@ return(
       text-decoration: none !important;
       letter-spacing: 1px;
       transition-duration: .3s;
+      min-width: 202px;
       &:hover {
         color: #fff;
         background-color: #303030;
