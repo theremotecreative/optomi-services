@@ -42,6 +42,7 @@ return(
         <Buttons>
           <a href={post.node.acf.ics_file.url.source_url} aria-label="Calendar Link">Outlook Calendar</a>
           <a href={post.node.acf.ics_file.url.source_url} aria-label="Calendar Link">Apple iCal</a>
+          <a href={post.node.acf.google_link} target="_blank" rel="noopener noreferrer" aria-label="Calendar Link">Google Calendar</a>
         </Buttons>
         <Return to="/">Return to Homepage</Return>
       </MainContent>
@@ -109,7 +110,7 @@ return(
     a {
       font-family: "Raleway";
       display: inline-block;
-      margin: 0 auto;
+      margin: 10px;
       text-align: center;
       padding: 0 23px;
       border: 2px solid #303030;
