@@ -102,8 +102,9 @@ return(
   
   const Buttons = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 35px;
